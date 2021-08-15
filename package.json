@@ -1,0 +1,31 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "mobile-first app for restaurant reservation",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass ./src/sass/main.scss:./public/css/styles.css --watch --style compressed",
+    "postsass": "postcss ./public/css/styles.css --use autoprefixer ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/chopard.ulysse/ulyssechopard_3_09082021.git"
+  },
+  "keywords": [
+    "restaurant",
+    "food"
+  ],
+  "author": "Ulysse Chopard",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://gitlab.com/chopard.ulysse/ulyssechopard_3_09082021/issues"
+  },
+  "homepage": "https://gitlab.com/chopard.ulysse/ulyssechopard_3_09082021#readme",
+  "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "sass": "^1.37.5"
+  }
+}
