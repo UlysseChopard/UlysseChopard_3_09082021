@@ -4,8 +4,8 @@
   "description": "mobile-first app for restaurant reservation",
   "main": "index.html",
   "scripts": {
-    "test:css": "w3c-css ",
-    "test:html": "html-validator --file=./public/index.html --verbose --format=json > ./.test/w3c.json || exit 0",
+    "test:css": "w3c-css https://chopard.ulysse.gitlab.io/ulyssechopard_3_09082021/ > ./.test/css.txt || exit 0",
+    "test:html": "html-validator --file=./public/index.html --verbose > ./.test/html.txt || exit 0",
     "sass": "sass ./src/sass:./public/css/ --watch --stop-on-error --style expanded",
     "postsass": "postcss ./public/css/styles.css --use autoprefixer ./public/css/prefixed/"
   },
