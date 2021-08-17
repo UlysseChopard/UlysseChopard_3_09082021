@@ -2,7 +2,7 @@
   "name": "ohmyfood",
   "version": "1.0.0",
   "description": "mobile-first app for restaurant reservation",
-  "main": "index.html",
+  "main": "./public/index.html",
   "scripts": {
     "test:css": "w3c-css https://chopard.ulysse.gitlab.io/ulyssechopard_3_09082021/ > ./.test/css.txt || exit 0",
     "test:html": "html-validator --file=./public/index.html --verbose > ./.test/html.txt || exit 0",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/chopard.ulysse/ulyssechopard_3_09082021.git"
+    "url": "git+https://github.com/UlysseChopard/UlysseChopard_3_09082021.git"
   },
   "keywords": [
     "restaurant",
