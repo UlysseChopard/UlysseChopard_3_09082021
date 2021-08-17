@@ -1,0 +1,17 @@
+// @function map-fetch($map, $keys) {
+//     $_length: length($keys);
+//     $_value: map-get($map, nth($keys, 1));
+
+//     @if (($_length > 1) and (type-of($_value) == map)) {
+//         $_rest: ();
+
+//         @for $i from 2 through $_length {
+//             $_rest: append($_rest, nth($keys, $i));
+//         }
+
+//         @return _map-fetch($_value, $_rest);
+
+//     } @else {
+//         @return $_value;
+//     }
+// }

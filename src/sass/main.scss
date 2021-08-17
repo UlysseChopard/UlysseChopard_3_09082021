@@ -1,2 +1,5 @@
-@use "./base/fonts";
-@use "./base/elements-html";
+@use "base";
+@use "components";
+@use "layout";
+@use "pages";
+@use "utils";
