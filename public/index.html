@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <base href="./" target="_self" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <base href="/public/" target="_self" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css/prefixed/main.scss" />
-    <meta charset="utf-8" />
-    <meta name="ohmyfood" content="restaurant app" />
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+
+    <meta name="author" content="Ulysse Chopard" />
+    <meta name="description" content="restaurant app" />
+    
     <title>Ohmyfood</title>
 
     <!-- tmp -->
@@ -20,93 +27,92 @@
       }
     </style>
   </head>
-  <header>
-    <h1>ohmyfood</h1>
-    <button type="button">
-      <a href="public/index.html">Accueil</a>
-    </button>
-  </header>
   <body>
-    <article>
-      <h2>Réservez le menu qui vous convient</h2>
-      <p>Découvrez des restaurants d'exception sélectionnés par nos soins</p>
-      <button type="button">
-        <a href="/">Explorer nos restaurants</a>
-      </button>
-    </article>
-    <section>
-      <h2>Fonctionnement</h2>
-      <ol>
-        <li>Choisissez un restaurant</li>
-        <li>Composez votre menu</li>
-        <li>Dégustez au restaurant</li>
-      </ol>
-    </section>
-    <section>
-      <h2>Restaurants</h2>
-      <ul>
-        <li>
-          <a>
-            <img
-              src="img/restaurants/la-palette-du-gout.jpg"
-              alt="repas appétissant"
-            />
-            <h3>La palette du goût</h3>
-            <p>Ménilmontant</p>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img
-              src="img/restaurants/la-note-enchantee.jpg"
-              alt="repas appétissant"
-            />
-            <h3>La note enchantée</h3>
-            <p>Charonne</p>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img
-              src="img/restaurants/a-la-francaise.jpg"
-              alt="repas appétissant"
-            />
-            <h3>A la française</h3>
-            <p>Cité rouge</p>
-          </a>
-        </li>
-        <li>
-          <a>
-            <img
-              src="img/restaurants/le-delice-des-sens.jpg"
-              alt="repas appétissant"
-            />
-            <h3>Le délice des sens</h3>
-            <p>Folie-Méricourt</p>
-          </a>
-        </li>
-      </ul>
-    </section>
+    <header>
+      <h1 class="logo">ohmyfood</h1>
+    </header>
+    <main>
+      <article>
+        <h2 class="titre">Réservez le menu qui vous convient</h2>
+        <p>Découvrez des restaurants d'exception sélectionnés par nos soins</p>
+        <button type="button">
+          <a href="index.html">Explorer nos restaurants</a>
+        </button>
+      </article>
+      <section>
+        <h2 class="titre">Fonctionnement</h2>
+        <ol>
+          <li>Choisissez un restaurant</li>
+          <li>Composez votre menu</li>
+          <li>Dégustez au restaurant</li>
+        </ol>
+      </section>
+      <section>
+        <h2 class="titre">Restaurants</h2>
+        <ul>
+          <li>
+            <a href="html/la-palette-du-gout-menu.html">
+              <img
+                src="img/restaurants/la-palette-du-gout.jpg"
+                alt="repas appétissant"
+              />
+              <h3>La palette du goût</h3>
+              <p>Ménilmontant</p>
+            </a>
+          </li>
+          <li>
+            <a href="html/la-note-enchantee-menu.html">
+              <img
+                src="img/restaurants/la-note-enchantee.jpg"
+                alt="repas appétissant"
+              />
+              <h3>La note enchantée</h3>
+              <p>Charonne</p>
+            </a>
+          </li>
+          <li>
+            <a href="html/a-la-francaise-menu.html">
+              <img
+                src="img/restaurants/a-la-francaise.jpg"
+                alt="repas appétissant"
+              />
+              <h3>A la française</h3>
+              <p>Cité rouge</p>
+            </a>
+          </li>
+          <li>
+            <a href="html/le-delice-des-sens-menu.html">
+              <img
+                src="img/restaurants/le-delice-des-sens.jpg"
+                alt="repas appétissant"
+              />
+              <h3>Le délice des sens</h3>
+              <p>Folie-Méricourt</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <h2 class="logo">ohmyfood</h2>
+      <nav>
+        <ul>
+          <li>
+            <a>Proposer un restaurant</a>
+          </li>
+          <li>
+            <a>Devenir partenaire</a>
+          </li>
+          <li>
+            <a>Mentions légales</a>
+          </li>
+          <li>
+            <address>
+              <a href="mailto:ohmyfood@codeu.site">Contact</a>
+            </address>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
-  <footer>
-    <h2>ohmyfood</h2>
-    <nav>
-      <ul>
-        <li>
-          <a>Proposer un restaurant</a>
-        </li>
-        <li>
-          <a>Devenir partenaire</a>
-        </li>
-        <li>
-          <a>Mentions légales</a>
-        </li>
-        <li>
-          <address>
-            <a href="mailto:ohmyfood@codeu.site">Contact</a>
-          </address>
-        </li>
-      </ul>
-    </nav>
-  </footer>
 </html>

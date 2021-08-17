@@ -1,4 +1,14 @@
-@use "../utils/variables";
+// Fonts
+// body {
+//     font-family: 'Roboto', sans-serif;;
+// }
 
-font-family: 'Roboto', sans-serif;
-font-family: 'Shrikhand', cursive;
+// header {
+//     font-family: 'Shrikhand', cursive;
+// }
+
+@use "../utils/variables" as var;
+@use "../utils/mixins" as mixins;
+
+@include mixins.font-family(var.$special-font, "Shrikhand");
+@include mixins.font-family(var.$other, "Roboto")
