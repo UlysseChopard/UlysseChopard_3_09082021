@@ -1,15 +1,75 @@
-@mixin font-family($font-classes: $font-classes, $police) {
-  @each $class in $font-classes {
-    .#{$class} {
-      font-family: $police, sans-serif;
+@use "sass:meta";
+@use "sass:list";
+@use "./variables" as var;
+
+@mixin set-property-for-all($page: var.$structure, $exceptions...) {
+  @each $block, $elements in $page {
+    @if not list.index($exceptions, $block) {
+      .#{$block} {
+        @content;
+        @each $elem in $elements {
+          @if not list.index($exceptions, $elem) {
+            &__#{$elem} {
+              @content;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @mixin for-modifiers($modifiers: var.$modifiers) {
+//   @each $modifier in $modifiers {
+//     &--#{$modifier} {
+//       @content;
+//     }
+//   }
+// }
+
+@mixin flex-elem(
+  $flex-flow: column nowrap,
+  $align-items: center,
+  $justify-content: space-evenly
+) {
+  display: flex;
+  flex: 1 100%;
+  flex-flow: $flex-flow;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin largeur($pourcent: 100%) {
+  width: $pourcent;
+  min-width: $pourcent;
+  max-width: $pourcent;
+}
+
+@mixin set-property($el: var.$structure) {
+  @if list.index(var.$modifiers, $el) {
+    @each $block, $elements in var.$structure {
+      .#{$block} {
+        &--#{$el} {
+          @content;
+        }
+        @each $elem in $elements {
+          &__#{$elem}--#{$el} {
+            @content;
+          }
+        }
+      }
+    }
+  } @else {
+    @each $block, $elements in var.$structure {
+      @if $el == $block {
+        .#{$el} {
+          @content;
+        }
+      } @else if list.index($elements, $el) {
+        .#{$block}__#{$el} {
+          @content;
+        }
+      }
     }
   };
 };
-
-@mixin flex($flex: 1 1 0, $flow: row wrap, $justify-content: space-evenly, $align-items: center) {
-    display: flex;
-    flex: $flex;
-    flex-flow: $flow;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}

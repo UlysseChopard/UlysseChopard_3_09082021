@@ -1,0 +1,11 @@
+@use "../utils/variables" as var;
+
+img {
+    width: 340px;
+    height: 170px;
+    object-fit: cover;
+}
+
+svg {
+    padding: map-get($map: var.$padding, $key: "svg");
+}

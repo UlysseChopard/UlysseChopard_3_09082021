@@ -1,0 +1,15 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins";
+
+// Listes
+@each $block in var.$structure {
+    .#{$block} {
+        &__liste {
+            max-width: 400px;
+            @include mixins.flex-elem($align-items: flex-start);
+        }
+        &__item {
+            height: map-get($map: var.$height, $key: "list-item");
+        }
+    }
+}

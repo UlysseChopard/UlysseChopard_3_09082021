@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"style.comp.css"}
+{"version":3,"sourceRoot":"","sources":["../sass/base/_blocks.scss","../sass/base/_reset.scss","../sass/base/_img.scss","../sass/components/_logo.scss","../sass/layout/_footer.scss"],"names":[],"mappings":"AAGA,EACI,sBCJJ,MACI,qBAGJ,EACI,cACA,qBCNJ,IACI,YACA,aACA,uBCCA,wBCFJ,QACI,yBACA","file":"style.comp.css"}

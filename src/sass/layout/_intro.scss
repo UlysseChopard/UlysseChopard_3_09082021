@@ -1,0 +1,5 @@
+@use "../utils/variables" as var;
+
+.intro {
+    background-color: map-get($map: var.$colors, $key: "light-grey");
+}

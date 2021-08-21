@@ -1,3 +1,7 @@
-* {
-    box-sizing: border-box;
+@use "../utils/variables" as var;
+@use "../utils/mixins";
+
+// Padding pour les elements de la page
+main > * {
+  padding: map-get($map: var.$padding, $key: "main");
 }

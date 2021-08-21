@@ -1,5 +1,6 @@
-@use "../utils/variables" as var;
-@use "../utils/mixins" as mixins;
-
-@include mixins.font-family(var.$special-font, "Shrikhand");
-@include mixins.font-family(var.$other, "Roboto")
+body {
+    font-family: "Roboto", sans-serif;
+    .logo, .titre {
+        font-family: "Shrikhand", sans-serif;
+    }
+}
