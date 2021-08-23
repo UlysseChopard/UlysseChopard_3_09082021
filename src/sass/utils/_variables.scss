@@ -47,7 +47,11 @@ $structure: (
         "lien",
         "image",
         "titre",
-        "lieu"
+        "lieu",
+        "texte",
+        "description",
+        "wrapper",
+        "favori"
     ),
     "footer": (),
     "sitemap": (
@@ -60,15 +64,33 @@ $modifiers: (
     "couleur-inverse"
 );
 
+$padding-vertical: 1rem .5rem 1rem .5rem;
+$padding-horizontal: 0 1rem;
+
 $padding: (
-    "main": 1rem 0 1rem 0,
-    "svg": 0 1rem 0 .5rem
+    "main": $padding-vertical,
+    "svg": 0 1rem 0 .5rem,
+    "titre": $padding-vertical,
+    "logo": $padding-vertical,
+    "blocks": $padding-vertical,
+    "localisation": $padding-vertical,
+    "list-item": $padding-vertical
 );
 
 $height: (
-    "list-item": 2rem
+    "list-item": 2rem, 
+    "image": 170px
 );
 
 $width: (
-    "largeur-page": 100%
+    "largeur-page": 100%,
+    "image": 340px
 );
+
+$border-radius: (
+    "image": 2rem
+);
+
+$list-style-type: (
+    "list": decimal
+)

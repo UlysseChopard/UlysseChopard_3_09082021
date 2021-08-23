@@ -1,18 +1,17 @@
 @use "../utils/mixins";
 @use "../utils/variables" as var;
 
-ul > li {
+ul, ul > li, figure, figcaption {
     list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
 }
 
-a {
+a, p {
     color: inherit;
     text-decoration: none;
-}
-
-p, ul {
     margin: 0;
-    padding: 1rem;
+    padding: 0;
 }
 
 // Tous les titres avec un padding et sans marge par defaut
@@ -20,28 +19,16 @@ h {
     @for $i from 1 through 4 {
         &#{$i} {
             margin: 0;
-            padding: 1rem;
+            padding: 0;
         }
     }
 }
 
 // Par defaut, tous les elements, sauf les images, occupent 100% de la largeur
-@include mixins.set-property-for-all(var.$structure, 'image') {
-    @include mixins.largeur();
+@include mixins.set-property-for-all(var.$structure, "image") {
+    @include mixins.largeur(100%);
 }
 
 @include mixins.set-property-for-all(var.$structure, "liste") {
     @include mixins.flex-elem();
-}
-
-@include mixins.set-property("footer") {
-    @include mixins.flex-elem($align-items: flex-start);
-};
-
-@include mixins.set-property("image") {
-    border-radius: 2rem;
-}
-
-@include mixins.set-property("titre") {
-    font-weight: bold;
 }

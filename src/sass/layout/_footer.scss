@@ -1,6 +1,9 @@
 @use "../utils/variables" as var;
+@use "../utils/mixins";
 
-.footer {
+
+@include mixins.set-property-for-all("footer") {
     background-color: map-get($map: var.$colors, $key: "dark");
     color: map-get($map: var.$colors, $key: "standard");
-}
+    @include mixins.flex-elem($align-items: flex-start);
+};
