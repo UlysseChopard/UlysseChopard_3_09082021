@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <base href="/public/" target="_self" />
 
-    <link rel="icon" type="image/svg" href="assets/logos/ohmyfood@2x.svg"  />
+    <link rel="icon" type="image/svg" href="assets/logos/ohmyfood@2x.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,9 +19,19 @@
 
     <meta name="author" content="Ulysse Chopard" />
     <meta name="description" content="restaurant app" />
-    
+
     <title>Ohmyfood</title>
-    <script src="https://kit.fontawesome.com/e33b8d6431.js" crossorigin="anonymous"></script>
+    <!-- <script
+      src="https://kit.fontawesome.com/e33b8d6431.js"
+      crossorigin="anonymous"
+    ></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <header class="header">
@@ -29,7 +39,9 @@
     </header>
     <main class="main">
       <aside class="localisation">
-        <h2 class="localisation__texte"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</h2>
+        <h2 class="localisation__texte">
+          <i class="fas fa-map-marker-alt"></i>Paris, Belleville
+        </h2>
       </aside>
       <article class="intro">
         <h2 class="intro__titre">Réservez le menu qui vous convient</h2>
@@ -40,16 +52,31 @@
       </article>
       <section class="presentation">
         <h2 class="presentation__titre">Fonctionnement</h2>
-        <ol class="presentation__liste">
-          <li class="presentation__item"><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-          <li class="presentation__item"><i class="fas fa-list-ul"></i>Composez votre menu</li>
-          <li class="presentation__item"><i class="fas fa-store"></i>Dégustez au restaurant</li>
+        <ol class="presentation__liste fa-ul">
+          <li class="presentation__item">
+            <span class="fa-li">
+              <i class="fas fa-mobile-alt"></i>
+            </span>
+            Choisissez un restaurant
+          </li>
+          <li class="presentation__item">
+            <span class="fa-li">
+              <i class="fas fa-list-ul"></i>
+            </span>
+            Composez votre menu
+          </li>
+          <li class="presentation__item">
+            <span class="fa-li">
+              <i class="fas fa-store"></i>
+            </span>
+            Dégustez au restaurant
+          </li>
         </ol>
       </section>
       <section class="restaurants">
         <h2 class="restaurants__titre">Restaurants</h2>
         <ul class="restaurants__liste">
-          <li cass="carte">
+          <li class="carte">
             <a class="carte__lien" href="html/la-palette-du-gout-menu.html">
               <figure class="carte__wrapper">
                 <img
@@ -67,7 +94,7 @@
                   <div class="carte__favori">
                     <i class="far fa-heart"></i>
                   </div>
-              </figcaption>
+                </figcaption>
               </figure>
             </a>
           </li>
@@ -90,7 +117,7 @@
                     <i class="far fa-heart"></i>
                   </div>
                 </figcaption>
-            </figure>
+              </figure>
             </a>
           </li>
           <li class="carte">
@@ -134,7 +161,7 @@
                     <i class="far fa-heart"></i>
                   </div>
                 </figcaption>
-            </figure>
+              </figure>
             </a>
           </li>
         </ul>
@@ -149,7 +176,7 @@
           </li>
           <li class="sitemap__item">
             <a><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
-          </li class="sitemap__item">
+          </li>
           <li class="sitemap__item">
             <a>Mentions légales</a>
           </li>

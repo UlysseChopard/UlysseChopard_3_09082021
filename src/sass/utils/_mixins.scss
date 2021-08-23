@@ -58,6 +58,7 @@
 }
 
 @mixin set-property($el) {
+  // Si la propriete s'applique a un modifier
   @if list.index(var.$modifiers, $el) {
     @each $block, $elements in var.$structure {
       .#{$block} {
@@ -70,21 +71,21 @@
           }
         }
       }
-    }
-  } @else {
+    };
+  } @else {  // Sinon, elle s'applique a un bloc ou un element
     @each $block, $elements in var.$structure {
-      @if $el == $block {
+      @if $el == $block {  // Bloc
         .#{$el} {
           @content;
         }
-      } @else if list.index($elements, $el) {
+      } @else if list.index($elements, $el) { // Element
         .#{$block}__#{$el} {
           @content;
         }
-      }
-    }
-  }
-}
+      };
+    };
+  };
+};
 
 @mixin set-property-for-list($elements...) {
   @each $elem in $elements {

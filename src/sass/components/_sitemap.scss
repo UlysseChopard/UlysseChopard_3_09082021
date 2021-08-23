@@ -1,0 +1,5 @@
+@use "../utils/mixins";
+
+@include mixins.set-property("sitemap") {
+    @include mixins.flex-elem($align-items: flex-start);
+}

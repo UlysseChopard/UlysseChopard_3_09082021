@@ -1,6 +1,6 @@
 @use "../utils/mixins";
 @use "../utils/variables" as var;
 
-@include mixins.set-property("logo") {
-    padding: map-get($map: var.$padding, $key: "logo");
-}
+// @include mixins.set-property("logo") {
+//     padding: map-get($map: var.$padding, $key: "logo");
+// }

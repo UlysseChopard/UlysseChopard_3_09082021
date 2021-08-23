@@ -2,5 +2,6 @@
 @use "../utils/mixins";
 
 @include mixins.set-property("carte") {
-    @include mixins.flex-elem($flex-flow: row nowrap);
+    // @include mixins.flex-elem($flex-flow: row nowrap);
+    border: black solid 2px;
 }

@@ -1,6 +1,7 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins";
 
+// Padding pour tous les blocs
 @include mixins.set-property-for-list(map-keys(var.$structure)) {
     padding: map-get($map: var.$padding, $key: "blocs");
 }
