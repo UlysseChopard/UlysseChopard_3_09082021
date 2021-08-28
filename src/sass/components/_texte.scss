@@ -1,0 +1,9 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins";
+
+@include mixins.set-property("texte") {
+    text-align: left;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+}

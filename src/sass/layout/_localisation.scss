@@ -2,8 +2,8 @@
 @use "../utils/mixins";
 
 @include mixins.set-property("localisation") {
-    background-color: map-get($map: var.$colors, $key: "light-black");
-    padding: map-get($map: var.$padding, $key: "localisation");
-    border-style: ridge none none none;
-    @include mixins.flex-elem($flex-flow: row nowrap);
+    background: linear-gradient(to bottom, map-get(var.$colors, "grey-shade") 1%, map-get(var.$colors, "light-black") 5%);
+    &__titre {
+        margin: 0;
+    }
 }

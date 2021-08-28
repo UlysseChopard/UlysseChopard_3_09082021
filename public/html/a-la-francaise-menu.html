@@ -18,111 +18,118 @@
     <meta name="author" content="Ulysse Chopard" />
     <meta name="description" content="restaurant app" />
     <title>Ohmyfood</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header>
-      <h1 class="logo">ohmyfood</h1>
-      <button type="button">
-        <a href="index.html">Accueil</a>
+    <header class="header">
+      <button type="bouton__accueil">
+        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
       </button>
+      <h1 class="logo">ohmyfood</h1>
     </header>
-    <main>
-      <h1 class="titre">A la française</h1>
-      <section>
-        <h2>Entrées</h2>
-        <ul>
-          <li>
-            <a>
-              <h3>Tartare de poulpe acidulé</h3>
-              <span>Aux zestes d'orange</span>
-              <p>25€</p>
+    <main class="main menu">
+      <h1 class="menu__titre">A la française</h1>
+      <section class="menu__entree">
+        <h2 class="menu__titre">Entrées</h2>
+        <ul class="menu__liste">
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Tartare de poulpe acidulé</h3>
+              <span class="plat__description">Aux zestes d'orange</span>
+              <p class="plat__prix">25€</p>
             </a>
           </li>
-          <li>
-            <a>
-              <h3>Velouté de légumes d'antan</h3>
-              <span>Carotte, panais, topinambour</span>
-              <p>35€</p>
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Velouté de légumes d'antan</h3>
+              <span class="plat__description">Carotte, panais, topinambour</span>
+              <p class="plat__prix">35€</p>
             </a>
           </li>
-          <li>
-            <a>
-              <h3>Soupe à l'oignon</h3>
-              <span>Revisitée</span>
-              <p>20€</p>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Plats</h2>
-        <ul>
-          <li>
-            <a>
-              <h3>Coquilles Saint-Jacques</h3>
-              <span>Accompagnées d'une purée de panais</span>
-              <p>40€</p>
-            </a>
-          </li>
-          <li>
-            <a>
-              <h3>Magret de canard</h3>
-              <span>Et parmentier de pommes de terre</span>
-              <p>35€</p>
-            </a>
-          </li>
-          <li>
-            <a>
-              <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-              <span>Sur son lit de gnocchis aux légumes</span>
-              <p>44€</p>
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Soupe à l'oignon</h3>
+              <span class="plat__description">Revisitée</span>
+              <p class="plat__prix">20€</p>
             </a>
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Desserts</h2>
-        <ul>
-          <li>
-            <a>
-              <h3>Pétales de violettes glacés</h3>
-              <span>Et purée de noisettes</span>
-              <p>18€</p>
+      <section class="menu__principal">
+        <h2 class="menu__titre">Plats</h2>
+        <ul class="menu__liste">
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Coquilles Saint-Jacques</h3>
+              <span class="plat__description">Accompagnées d'une purée de panais</span>
+              <p class="plat__prix">40€</p>
             </a>
           </li>
-          <li>
-            <a>
-              <h3>Fondant au chocolat</h3>
-              <span>Revisité</span>
-              <p>22€</p>
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Magret de canard</h3>
+              <span class="plat__description">Et parmentier de pommes de terre</span>
+              <p class="plat__prix">35€</p>
             </a>
           </li>
-          <li>
-            <a>
-              <h3>Millefeuille croustillant</h3>
-              <span>Myrtilles et pâte d’amande</span>
-              <p>23€</p>
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Pigeonneau d’Ille-et-Vilaine</h3>
+              <span class="plat__description">Sur son lit de gnocchis aux légumes</span>
+              <p class="plat__prix">44€</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="menu__dessert">
+        <h2 class="menu__titre">Desserts</h2>
+        <ul class="menu__liste">
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Pétales de violettes glacés</h3>
+              <span class="plat__description">Et purée de noisettes</span>
+              <p class="plat__prix">18€</p>
+            </a>
+          </li>
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Fondant au chocolat</h3>
+              <span class="plat__description">Revisité</span>
+              <p class="plat__prix">22€</p>
+            </a>
+          </li>
+          <li class="menu__item plat">
+            <a class="plat__lien">
+              <h3 class="plat__titre">Millefeuille croustillant</h3>
+              <span class="plat__description">Myrtilles et pâte d’amande</span>
+              <p class="plat__prix">23€</p>
             </a>
           </li>
         </ul>
       </section>
       <button type="button">Commander</button>
     </main>
-    <footer>
+    <footer class="footer">
       <h2 class="logo">ohmyfood</h2>
-      <nav>
-        <ul>
-          <li>
-            <a>Proposer un restaurant</a>
+      <nav class="sitemap">
+        <ul class="sitemap__liste">
+          <li class="sitemap__item">
+            <a><i class="fas fa-utensils"></i>Proposer un restaurant</a>
           </li>
-          <li>
-            <a>Devenir partenaire</a>
+          <li class="sitemap__item">
+            <a><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
           </li>
-          <li>
+          <li class="sitemap__item">
             <a>Mentions légales</a>
           </li>
-          <li>
-            <address>
+          <li class="sitemap__item">
+            <address class="sitemap__contact">
               <a href="mailto:ohmyfood@codeu.site">Contact</a>
             </address>
           </li>

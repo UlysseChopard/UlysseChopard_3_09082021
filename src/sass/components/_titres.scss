@@ -4,4 +4,5 @@
 @include mixins.set-property("titre") {
     padding: map-get($map: var.$padding, $key: "titre");
     font-weight: bold;
+    margin: 0;
 }

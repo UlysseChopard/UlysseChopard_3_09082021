@@ -1,0 +1,10 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins";
+
+@include mixins.set-property("header") {
+    padding: unset;
+    > * {
+        display: inline-block;
+        align-items: center;
+    }
+}

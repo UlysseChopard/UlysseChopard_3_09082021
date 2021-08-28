@@ -1,7 +1,10 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins";
 
-// Padding pour les elements de la page
-@include mixins.set-property("titre") {
-  padding: map-get($map: var.$padding, $key: "main");
-}
+@include mixins.set-property("main") {
+  background-color: map-get($map: var.$colors, $key: "light-grey");
+  // Tous les blocs de main ont un padding left et right
+  & > * {
+    padding: map-get($map: var.$padding, $key: "main-items");
+  }
+};

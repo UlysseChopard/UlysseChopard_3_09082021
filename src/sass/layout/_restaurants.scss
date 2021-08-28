@@ -1,5 +1,0 @@
-@use "../utils/variables" as var;
-
-.restaurants {
-    background-color: map-get($map: var.$colors, $key: "light-grey");
-}

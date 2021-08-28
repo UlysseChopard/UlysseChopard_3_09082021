@@ -339,12 +339,7 @@ template {
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding-inline-start: 0;
-}
-
-figure {
-  margin: 0;
+  padding: unset;
 }
 
 a, p {
@@ -352,8 +347,16 @@ a, p {
   text-decoration: none;
 }
 
-body {
-  width: 100%;
+button {
+  border: unset;
+}
+
+main {
+  padding: 0;
+}
+
+button {
+  background-color: inherit;
 }
 
 body {
@@ -361,6 +364,46 @@ body {
 }
 body .logo, body .titre {
   font-family: "Shrikhand", sans-serif;
+}
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+}
+
+.localisation {
+  text-align: center;
+}
+
+.intro {
+  text-align: center;
+}
+
+.presentation {
+  text-align: center;
+}
+
+.restaurants {
+  text-align: center;
+}
+
+.carte {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+}
+
+.sitemap {
+  text-align: center;
 }
 
 .footer {
@@ -374,50 +417,108 @@ body .logo, body .titre {
   min-width: 0;
 }
 
-.intro__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+.header {
+  padding: unset;
+}
+.header > * {
+  display: inline-block;
+  align-items: center;
 }
 
-.presentation__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+.main {
+  background-color: #F6F6F6;
+}
+.main > * {
+  padding: 0 1rem;
 }
 
-.restaurants__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+.presentation {
+  background-color: white;
+}
+.presentation .presentation__item {
+  background-color: #F6F6F6;
+  border-radius: 2rem;
+  margin: 1.5rem;
+  padding: 2rem;
+}
+.presentation .sitemap__item {
+  background-color: #F6F6F6;
+  border-radius: 2rem;
+  margin: 1.5rem;
+  padding: 2rem;
+}
+.presentation__puce {
+  position: relative;
+  right: 3rem;
+  top: 0;
+  margin: 3px;
+  width: 20px;
+  background: #EAEAEA;
+  height: 20px;
+  text-align: center;
+  content: counter(list-item);
+  border-radius: 20px;
+  line-height: 20px;
 }
 
-.carte__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+.intro .intro__bouton {
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 5px 2px #dbdbdb;
 }
 
 .intro {
-  background-color: #F6F6F6;
-}
-
-.restaurants {
-  background-color: #F6F6F6;
+  text-align: center;
 }
 
 .localisation {
-  background-color: #EAEAEA;
-  padding: 1rem 0.5rem 1rem 0.5rem;
-  border-style: ridge none none none;
-  display: flex;
-  flex: auto;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-evenly;
-  min-width: 0;
+  background: linear-gradient(to bottom, #dbdbdb 1%, #EAEAEA 5%);
+}
+.localisation__titre {
+  margin: 0;
 }
 
 .carte {
-  border: black solid 2px;
+  flex: 0 1 25%;
+  align-items: center;
+  flex-flow: column nowrap;
+  text-align: start;
+}
+.carte__titre {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.carte__description {
+  display: flex;
+  flex-direction: column;
+}
+.carte__description > * {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
 }
 
-img {
-  width: 340px;
-  height: 170px;
-  object-fit: cover;
+.logo {
+  margin: 0;
+  padding: 0.5em;
+}
+
+.presentation__liste {
+  text-align: left;
+  padding: 0 0 1rem 0;
+}
+
+.restaurants__liste {
+  text-align: left;
+  padding: 0 0 1rem 0;
+}
+
+.sitemap__liste {
+  text-align: left;
+  padding: 0 0 1rem 0;
 }
 
 svg {
@@ -425,30 +526,40 @@ svg {
 }
 
 .carte__image {
+  display: block;
   border-radius: 2rem;
-  width: 340px;
-  height: 170px;
   object-fit: cover;
+  max-width: 100%;
+}
+
+.localisation__titre {
+  padding: 1rem 0;
+  font-weight: bold;
+  margin: 0;
 }
 
 .intro__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0;
   font-weight: bold;
+  margin: 0;
 }
 
 .presentation__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0;
   font-weight: bold;
+  margin: 0;
 }
 
 .restaurants__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0;
   font-weight: bold;
+  margin: 0;
 }
 
 .carte__titre {
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0;
   font-weight: bold;
+  margin: 0;
 }
 
 .presentation__item {
@@ -458,8 +569,7 @@ svg {
   align-items: center;
   justify-content: flex-start;
   min-width: 0;
-  display: list-item;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0;
 }
 
 .sitemap__item {
@@ -469,12 +579,12 @@ svg {
   align-items: center;
   justify-content: flex-start;
   min-width: 0;
-  display: list-item;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0;
 }
 
 i {
   vertical-align: middle;
+  padding: 0 1rem 0 0;
 }
 
 .sitemap {
@@ -484,6 +594,9 @@ i {
   align-items: flex-start;
   justify-content: space-evenly;
   min-width: 0;
+}
+.sitemap__liste {
+  padding-left: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

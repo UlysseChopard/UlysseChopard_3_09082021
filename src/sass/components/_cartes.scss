@@ -1,7 +1,25 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins";
 
+// Cartes au milieu de la page
 @include mixins.set-property("carte") {
-    // @include mixins.flex-elem($flex-flow: row nowrap);
-    border: black solid 2px;
+    flex: 0 1 25%;
+    align-items: center;
+    flex-flow: column nowrap;
+    text-align: start;
+    &__titre {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        & > * {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin: 0;
+        }
+    }
 }
