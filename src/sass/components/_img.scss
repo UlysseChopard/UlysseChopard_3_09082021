@@ -1,12 +1,9 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins";
 
-svg {
-    padding: map-get($map: var.$padding, $key: "svg");
-}
-
 @include mixins.set-property("image") {
     display: block;
+    padding: none;
     border-radius: map-get($map: var.$border-radius, $key: "standard");
     object-fit: cover;
     max-width: 100%;

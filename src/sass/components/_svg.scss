@@ -4,3 +4,7 @@ i {
     vertical-align: middle;
     padding: 0 1rem 0 0;
 }
+
+svg {
+    padding: map-get($map: var.$padding, $key: "svg");
+}

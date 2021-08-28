@@ -24,8 +24,33 @@ $fonts: (
 $special-font: "titre" "logo";
 $other: "body";
 
+$structure-menu: (
+    "menu": (
+        "titre",
+        "entree",
+        "principal",
+        "dessert",
+        "titre",
+        "liste",
+        "item",
+        "lien"
+    ),
+    "plat": (
+        "lien",
+        "titre",
+        "description",
+        "prix"
+    ),
+    "bouton": (
+        "accueil",
+        "commande"
+    )
+);
+
 $structure: (
-    "header": (),
+    "header": (
+        "lien-accueil"
+    ),
     "logo": (),
     "main": (),
     "localisation": (

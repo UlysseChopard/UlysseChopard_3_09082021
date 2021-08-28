@@ -1,0 +1,30 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins";
+@use "../components/boutons";
+
+.menu {
+    @include boutons.degrade("bouton");
+
+    &__image {
+        padding: 0;
+    }
+
+    &__titre-principal {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2rem;
+        position: relative;
+        top: -3rem;
+        border-radius: map-get($map: var.$border-radius, $key: "standard");
+    }
+
+    &__entree, &__principal, &__dessert {
+        text-align: start;
+    }
+
+    &__titre > .souligne {
+        text-decoration: underline;
+        text-decoration-color: map-get($map: var.$colors, $key: "tertiary");
+        text-underline-offset: 10px;
+    }
+}

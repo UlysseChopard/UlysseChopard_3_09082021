@@ -28,15 +28,16 @@
   </head>
   <body>
     <header class="header">
-      <button type="bouton__accueil">
+      <button type="button" class="header__bouton">
         <a href="index.html"><i class="fas fa-arrow-left"></i></a>
       </button>
       <h1 class="logo">ohmyfood</h1>
     </header>
     <main class="main menu">
-      <h1 class="menu__titre">A la française</h1>
+      <img class="menu__image" src="assets/img/restaurants/a-la-francaise.jpg" alt="restaurant a la française" width=100% />
+      <h1 class="titre menu__titre-principal menu__titre">A la française<i class="main__favori far fa-heart"></i></h1>
       <section class="menu__entree">
-        <h2 class="menu__titre">Entrées</h2>
+        <h2 class="menu__titre"><strong class="souligne">Entr</strong>ées</h2>
         <ul class="menu__liste">
           <li class="menu__item plat">
             <a class="plat__lien">
@@ -62,7 +63,7 @@
         </ul>
       </section>
       <section class="menu__principal">
-        <h2 class="menu__titre">Plats</h2>
+        <h2 class="menu__titre"><strong class="souligne">Plat</strong>s</h2>
         <ul class="menu__liste">
           <li class="menu__item plat">
             <a class="plat__lien">
@@ -88,7 +89,7 @@
         </ul>
       </section>
       <section class="menu__dessert">
-        <h2 class="menu__titre">Desserts</h2>
+        <h2 class="menu__titre"><strong class="souligne">Dess</strong>erts</h2>
         <ul class="menu__liste">
           <li class="menu__item plat">
             <a class="plat__lien">
@@ -113,7 +114,7 @@
           </li>
         </ul>
       </section>
-      <button type="button">Commander</button>
+      <button type="button" class="menu__bouton">Commander</button>
     </main>
     <footer class="footer">
       <h2 class="logo">ohmyfood</h2>

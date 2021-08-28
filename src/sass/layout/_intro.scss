@@ -1,14 +1,16 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins";
+@use "../components/boutons";
 
 @include mixins.set-property("intro") {
-    @include mixins.set-property("bouton") {
-        background: linear-gradient(to bottom right, map-get(var.$colors, "secondary"), map-get(var.$colors, "primary"));
-        padding: 1rem;
-        border-radius: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 5px 5px 2px map-get($map: var.$colors, $key: "grey-shade");
-    };
+    // @include mixins.set-property("bouton") {
+    //     background: linear-gradient(to bottom right, map-get(var.$colors, "secondary"), map-get(var.$colors, "primary"));
+    //     padding: 1rem;
+    //     border-radius: 2rem;
+    //     margin-bottom: 2rem;
+    //     box-shadow: 0 5px 5px 2px map-get($map: var.$colors, $key: "grey-shade");
+    // };
+    @include boutons.degrade("bouton");
 };
 
 @include mixins.set-property("intro") {

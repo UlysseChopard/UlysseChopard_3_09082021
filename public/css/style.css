@@ -359,6 +359,10 @@ button {
   background-color: inherit;
 }
 
+strong {
+  font-weight: inherit;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -422,7 +426,6 @@ body .logo, body .titre {
 }
 .header > * {
   display: inline-block;
-  align-items: center;
 }
 
 .main {
@@ -430,6 +433,7 @@ body .logo, body .titre {
 }
 .main > * {
   padding: 0 1rem;
+  background-color: #F6F6F6;
 }
 
 .presentation {
@@ -461,7 +465,8 @@ body .logo, body .titre {
   line-height: 20px;
 }
 
-.intro .intro__bouton {
+.intro__bouton {
+  min-width: 60%;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   padding: 1rem;
   border-radius: 2rem;
@@ -478,6 +483,34 @@ body .logo, body .titre {
 }
 .localisation__titre {
   margin: 0;
+}
+
+.menu__bouton {
+  min-width: 60%;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding: 1rem;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 5px 5px 2px #dbdbdb;
+}
+.menu__image {
+  padding: 0;
+}
+.menu__titre-principal {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+  position: relative;
+  top: -3rem;
+  border-radius: 2rem;
+}
+.menu__entree, .menu__principal, .menu__dessert {
+  text-align: start;
+}
+.menu__titre > .souligne {
+  text-decoration: underline;
+  text-decoration-color: #99E2D0;
+  text-underline-offset: 10px;
 }
 
 .carte {
@@ -521,12 +554,9 @@ body .logo, body .titre {
   padding: 0 0 1rem 0;
 }
 
-svg {
-  padding: 0 1rem 0 0.5rem;
-}
-
 .carte__image {
   display: block;
+  padding: none;
   border-radius: 2rem;
   object-fit: cover;
   max-width: 100%;
@@ -585,6 +615,10 @@ svg {
 i {
   vertical-align: middle;
   padding: 0 1rem 0 0;
+}
+
+svg {
+  padding: 0 1rem 0 0.5rem;
 }
 
 .sitemap {
