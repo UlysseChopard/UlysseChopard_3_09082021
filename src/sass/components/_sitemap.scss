@@ -4,5 +4,6 @@
     @include mixins.flex-elem($align-items: flex-start);
     &__liste {
         padding-left: 1rem;
+        align-items: flex-start;
     }
 }

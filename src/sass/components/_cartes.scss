@@ -7,6 +7,13 @@
     align-items: center;
     flex-flow: column nowrap;
     text-align: start;
+
+    &__wrapper {
+        border-radius: 2rem;
+        background-color: map-get(var.$colors, "standard");
+        margin: 1rem 0;
+    }
+
     &__titre {
         flex-direction: row;
         justify-content: space-between;
@@ -15,6 +22,8 @@
     &__description {
         display: flex;
         flex-direction: column;
+        padding: 0 0 1rem 1rem;
+
         & > * {
             display: flex;
             flex-direction: row;

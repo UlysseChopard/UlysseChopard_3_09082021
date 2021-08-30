@@ -4,7 +4,7 @@
 @include mixins.set-property("image") {
     display: block;
     padding: none;
-    border-radius: map-get($map: var.$border-radius, $key: "standard");
+    border-radius: 2rem 2rem 0 0;
     object-fit: cover;
     max-width: 100%;
 }

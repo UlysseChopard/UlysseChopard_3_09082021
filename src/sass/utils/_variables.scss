@@ -83,6 +83,26 @@ $structure: (
     "sitemap": (
         "liste",
         "item"
+    ),
+    "menu": (
+        "titre",
+        "entree",
+        "principal",
+        "dessert",
+        "titre",
+        "liste",
+        "item",
+        "lien"
+    ),
+    "plat": (
+        "lien",
+        "titre",
+        "description",
+        "prix"
+    ),
+    "bouton": (
+        "accueil",
+        "commande"
     )
 );
 

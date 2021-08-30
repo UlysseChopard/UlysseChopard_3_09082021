@@ -1,0 +1,35 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins";
+
+// @include mixins.set-property("plat") {
+//     background-color: map-get($map: var.$colors, $key: "standard");
+//         > * {
+//             background-color: map-get($map: var.$colors, $key: "standard");
+//         }
+// }
+
+.plat {
+    display: flex;
+    background-color: map-get($map: var.$colors, $key: "standard");
+    width: 90%;
+    border-radius: 2rem;
+    box-shadow: 0 0 .5rem map-get($map: var.$colors, $key: "grey-shade");
+
+    &__lien {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    &__titre {
+        align-self: flex-start;
+        margin: 0;
+    }
+    
+    &__description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+}

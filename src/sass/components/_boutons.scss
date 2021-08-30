@@ -3,7 +3,7 @@
 
 @mixin degrade($elem) {
     &__#{$elem} {
-        min-width: 60%;
+        min-width: 240px;
         background: linear-gradient(to bottom right, map-get(var.$colors, "secondary"), map-get(var.$colors, "primary"));
         padding: 1rem;
         border-radius: 2rem;
@@ -11,3 +11,14 @@
         box-shadow: 0 5px 5px 2px map-get($map: var.$colors, $key: "grey-shade");
     }
 };
+
+.carte__favori {
+    &:hover {
+        transition: color 1000ms;
+        transition: font-weight 1000ms;
+        &::before {
+            color: map-get($map: var.$colors, $key: "secondary");
+            font-weight: 900;
+        }
+    }
+}

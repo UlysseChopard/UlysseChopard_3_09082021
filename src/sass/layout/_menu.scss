@@ -27,4 +27,17 @@
         text-decoration-color: map-get($map: var.$colors, $key: "tertiary");
         text-underline-offset: 10px;
     }
+
+    &__liste {
+        display: flex;
+        flex-flow: column nowrap;
+        flex: 1;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        padding: 1rem;
+        margin: 1rem;
+    }
 }

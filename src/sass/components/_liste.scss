@@ -2,6 +2,9 @@
 @use "../utils/mixins";
 
 @include mixins.set-property("liste") {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     text-align: left;
     padding: 0 0 1rem 0;
 };
