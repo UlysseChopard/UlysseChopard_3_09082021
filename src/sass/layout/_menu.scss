@@ -3,7 +3,10 @@
 @use "../components/boutons";
 
 .menu {
-    @include boutons.degrade("bouton");
+    &__bouton {
+        @include boutons.degrade;
+        @include boutons.principaux;
+    }
 
     &__image {
         padding: 0;

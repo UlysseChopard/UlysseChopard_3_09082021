@@ -10,7 +10,10 @@
     //     margin-bottom: 2rem;
     //     box-shadow: 0 5px 5px 2px map-get($map: var.$colors, $key: "grey-shade");
     // };
-    @include boutons.degrade("bouton");
+    &__bouton {
+        @include boutons.degrade;
+        @include boutons.principaux;
+    }
 };
 
 @include mixins.set-property("intro") {

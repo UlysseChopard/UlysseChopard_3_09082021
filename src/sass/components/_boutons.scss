@@ -1,24 +1,27 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins";
 
-@mixin degrade($elem) {
-    &__#{$elem} {
-        min-width: 240px;
-        background: linear-gradient(to bottom right, map-get(var.$colors, "secondary"), map-get(var.$colors, "primary"));
-        padding: 1rem;
-        border-radius: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 5px 5px 2px map-get($map: var.$colors, $key: "grey-shade");
-    }
+$degrade: linear-gradient(to bottom right, map-get(var.$colors, "secondary"), map-get(var.$colors, "primary"));
+
+@mixin degrade {
+        background: $degrade;
+        color: map-get(var.$colors, "standard");
 };
 
+@mixin principaux {
+    min-width: 240px;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    box-shadow: 0 5px 5px 2px map-get($map: var.$colors, $key: "grey-shade");
+}
+
 .carte__favori {
-    &:hover {
-        transition: color 1000ms;
-        transition: font-weight 1000ms;
+    &:hover, &:active {
+        transition: font-weight 4s;
         &::before {
-            color: map-get($map: var.$colors, $key: "secondary");
             font-weight: 900;
+            @include degrade;
         }
     }
 }

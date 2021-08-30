@@ -432,13 +432,13 @@ body .logo, body .titre {
   text-align: center;
 }
 
-.carte__favori:hover {
-  transition: color 1000ms;
-  transition: font-weight 1000ms;
+.carte__favori:hover, .carte__favori:active {
+  transition: font-weight 4s;
 }
-.carte__favori:hover::before {
-  color: #FF79DA;
+.carte__favori:hover::before, .carte__favori:active::before {
   font-weight: 900;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: white;
 }
 
 .carte {
@@ -669,11 +669,12 @@ svg {
 }
 
 .intro__bouton {
-  min-width: 240px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  padding: 1rem;
+  color: white;
+  min-width: 240px;
   border-radius: 2rem;
   margin-bottom: 2rem;
+  padding: 1rem;
   box-shadow: 0 5px 5px 2px #dbdbdb;
 }
 
@@ -689,11 +690,12 @@ svg {
 }
 
 .menu__bouton {
-  min-width: 240px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  padding: 1rem;
+  color: white;
+  min-width: 240px;
   border-radius: 2rem;
   margin-bottom: 2rem;
+  padding: 1rem;
   box-shadow: 0 5px 5px 2px #dbdbdb;
 }
 .menu__image {
