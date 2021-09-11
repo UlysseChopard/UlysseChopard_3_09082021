@@ -1,0 +1,5 @@
+@use "../utils/var";
+
+.fas {
+    padding: 0 var.$padding;
+}

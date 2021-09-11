@@ -1,14 +1,9 @@
-.restaurants__liste {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: space-around;
-    .carte {
+.restaurants {
+    &__liste {
         display: flex;
-        flex: 50%;
-    }
-
-    @media screen and (min-width: 800px) {
-        flex-flow: row wrap;
+        flex-flow: column nowrap;
+        @media screen and (min-width: 500px) {
+            flex-flow: row wrap;
+        }
     }
 }

@@ -1,14 +1,5 @@
-@use "./variables" as var;
-
-@mixin favoris($background: none) {
-    @keyframes favoris {
-        from {
-            background: initial;
-            background-clip: initial;
-            font-weight: initial;
-            -webkit-background-clip: initial;
-            color: initial
-        }
+@mixin degrade-icone-mx ($background) {
+    @keyframes degrade-icone-kf {
         to {
             font-weight: 900;
             background: $background;
@@ -18,44 +9,3 @@
         }
     }
 };
-
-// Loading spinner
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes show {
-    from {
-        opacity: .7;
-    }
-    50% {
-        opacity: .5;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes hide {
-    to {
-        display: none;
-    }   
-}
-
-// Passe par les 3 couleurs de la charte graphique
-@keyframes switch-colors {
-    from {
-        border-top-color: map-get($map: var.$colors, $key: "primary");
-    }
-    50% {
-        border-top-color: map-get($map: var.$colors, $key: "secondary");
-    }
-    to {
-        border-top-color: map-get($map: var.$colors, $key: "tertiary");
-    }
-}

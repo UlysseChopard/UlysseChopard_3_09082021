@@ -1,0 +1,17 @@
+$colors: (
+    "standard": white,
+    "primary":#9356DC,
+    "secondary":#FF79DA,
+    "tertiary":#99E2D0,
+    "light-secondary":#f5EDFF,
+    "light-black":#EAEAEA,
+    "light-grey":#F6F6F6,
+    "dark":#353535,
+    "grey-shade": #dbdbdb
+);
+
+$border-radius: 2rem;
+$padding: 1rem;
+$blur: 1rem;
+$spread: 1rem;
+$degrade: -webkit-linear-gradient(bottom left, map-get($colors, "secondary"), map-get($colors, "primary"));

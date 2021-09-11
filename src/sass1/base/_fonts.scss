@@ -1,0 +1,7 @@
+// Tout en Roboto sauf les logos et les titres principaux (classe titre)
+body {
+    font-family: "Roboto", sans-serif;
+    .logo, .titre {
+        font-family: "Shrikhand", sans-serif;
+    }
+}

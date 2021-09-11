@@ -1,0 +1,6 @@
+@use "../utils/var";
+
+@mixin degrade {
+    background: var.$degrade;
+    color: map-get(var.$colors, "standard");
+};

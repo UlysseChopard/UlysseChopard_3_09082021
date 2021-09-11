@@ -1,0 +1,7 @@
+.sitemap {
+    padding: var.$padding 0;
+    flex-flow: column nowrap;
+    &__item {
+        flex: 1;
+    }
+}

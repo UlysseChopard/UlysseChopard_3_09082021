@@ -1,0 +1,5 @@
+@use "../utils/var";
+
+body {
+    background-color: map-get(var.$colors, "light-grey");
+}

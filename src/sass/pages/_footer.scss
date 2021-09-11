@@ -1,0 +1,9 @@
+@use "../utils/var";
+
+.footer {
+    background-color: map-get($map: var.$colors, $key: "dark");
+    color: map-get($map: var.$colors, $key: "standard");
+    padding: var.$padding;
+    display: flex;
+    flex-flow: column nowrap;
+}

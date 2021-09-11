@@ -1,0 +1,9 @@
+@use "../utils/variables" as var;
+@use "../utils/mixins";
+
+@include mixins.set-property("localisation") {
+    background: linear-gradient(to bottom, map-get(var.$colors, "grey-shade") 1%, map-get(var.$colors, "light-black") 5%);
+    &__titre {
+        margin: 0;
+    }
+}
