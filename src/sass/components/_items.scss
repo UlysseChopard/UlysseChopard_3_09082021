@@ -2,7 +2,7 @@
 @use "../utils/mixins";
 
 @include mixins.set-property("item") {
-    @include mixins.flex-elem($flex-flow: row nowrap, $justify-content: flex-start);
+    @include mixins.flex-elem($flex-flow: row nowrap, $justify-content: flex-start, $flex: 1 0 0);
     // display: list-item;
-    padding: map-get($map: var.$padding, $key: "list-item");
+    // padding: map-get($map: var.$padding, $key: "list-item");
 }

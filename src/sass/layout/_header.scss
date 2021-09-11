@@ -3,7 +3,19 @@
 
 @include mixins.set-property("header") {
     padding: unset;
-    > * {
-        display: inline-block;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    
+    &__bouton {
+        justify-self: flex-start;
+        justify-content: flex-start;
+        flex: 1;
+    }
+    .logo {
+        flex: 10;
+        justify-self: center;
     }
 }

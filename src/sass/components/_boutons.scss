@@ -1,7 +1,8 @@
 @use "../utils/variables" as var;
 @use "../utils/mixins";
+@use "../utils/keyframes" as kf;
 
-$degrade: linear-gradient(to bottom right, map-get(var.$colors, "secondary"), map-get(var.$colors, "primary"));
+$degrade: -webkit-linear-gradient(bottom left, map-get(var.$colors, "secondary"), map-get(var.$colors, "primary"));
 
 @mixin degrade {
         background: $degrade;
@@ -14,14 +15,14 @@ $degrade: linear-gradient(to bottom right, map-get(var.$colors, "secondary"), ma
     margin-bottom: 2rem;
     padding: 1rem;
     box-shadow: 0 5px 5px 2px map-get($map: var.$colors, $key: "grey-shade");
-}
+};
 
 .carte__favori {
-    &:hover, &:active {
-        transition: font-weight 4s;
+    &:hover {
         &::before {
-            font-weight: 900;
-            @include degrade;
+            animation: favoris forwards 1s;
         }
     }
 }
+
+@include kf.favoris($degrade);

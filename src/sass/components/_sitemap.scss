@@ -1,9 +1,11 @@
 @use "../utils/mixins";
 
 @include mixins.set-property("sitemap") {
+    width: 100%;
     @include mixins.flex-elem($align-items: flex-start);
     &__liste {
         padding-left: 1rem;
         align-items: flex-start;
+        width: 100%;
     }
 }

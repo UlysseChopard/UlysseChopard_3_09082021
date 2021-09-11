@@ -337,6 +337,41 @@ template {
   display: none;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes show {
+  from {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hide {
+  to {
+    display: none;
+  }
+}
+@keyframes switch-colors {
+  from {
+    border-top-color: #9356DC;
+  }
+  50% {
+    border-top-color: #FF79DA;
+  }
+  to {
+    border-top-color: #99E2D0;
+  }
+}
 ul {
   list-style-type: none;
   padding: unset;
@@ -432,25 +467,39 @@ body .logo, body .titre {
   text-align: center;
 }
 
-.carte__favori:hover, .carte__favori:active {
-  transition: font-weight 4s;
-}
-.carte__favori:hover::before, .carte__favori:active::before {
-  font-weight: 900;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  color: white;
+.carte__favori:hover::before {
+  animation: favoris forwards 1s;
 }
 
+@keyframes favoris {
+  from {
+    background: initial;
+    background-clip: initial;
+    font-weight: initial;
+    -webkit-background-clip: initial;
+    color: initial;
+  }
+  to {
+    font-weight: 900;
+    background: -webkit-linear-gradient(bottom left, #FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
 .carte {
-  flex: 0 1 25%;
   align-items: center;
   flex-flow: column nowrap;
   text-align: start;
+  height: 300px;
 }
 .carte__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  width: inherit;
   border-radius: 2rem;
   background-color: white;
-  margin: 1rem 0;
+  box-shadow: 0 0 1rem #dbdbdb;
 }
 .carte__titre {
   flex-direction: row;
@@ -468,6 +517,24 @@ body .logo, body .titre {
   margin: 0;
 }
 
+.carte::before {
+  display: flex;
+  margin-top: 200px;
+  left: 100px;
+  z-index: 1;
+  content: " ";
+  padding: 0.5rem;
+}
+.carte:nth-child(1)::before, .carte:nth-child(2)::before {
+  display: flex;
+  margin-top: 200px;
+  left: 100px;
+  z-index: 1;
+  content: "Nouveau";
+  padding: 0.5rem;
+  background-color: #99E2D0;
+}
+
 .logo {
   margin: 0;
   padding: 0.5em;
@@ -480,6 +547,11 @@ body .logo, body .titre {
   text-align: left;
   padding: 0 0 1rem 0;
 }
+@media screen and (min-width: 800px) {
+  .presentation__liste {
+    flex-flow: row wrap;
+  }
+}
 
 .restaurants__liste {
   display: flex;
@@ -487,6 +559,11 @@ body .logo, body .titre {
   align-items: center;
   text-align: left;
   padding: 0 0 1rem 0;
+}
+@media screen and (min-width: 800px) {
+  .restaurants__liste {
+    flex-flow: row wrap;
+  }
 }
 
 .sitemap__liste {
@@ -496,6 +573,11 @@ body .logo, body .titre {
   text-align: left;
   padding: 0 0 1rem 0;
 }
+@media screen and (min-width: 800px) {
+  .sitemap__liste {
+    flex-flow: row wrap;
+  }
+}
 
 .menu__liste {
   display: flex;
@@ -504,13 +586,19 @@ body .logo, body .titre {
   text-align: left;
   padding: 0 0 1rem 0;
 }
+@media screen and (min-width: 800px) {
+  .menu__liste {
+    flex-flow: row wrap;
+  }
+}
 
 .carte__image {
   display: block;
-  padding: none;
+  padding: 0;
   border-radius: 2rem 2rem 0 0;
   object-fit: cover;
-  max-width: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .localisation__titre {
@@ -557,32 +645,29 @@ body .logo, body .titre {
 
 .presentation__item {
   display: flex;
-  flex: auto;
+  flex: 1 0 0;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
   min-width: 0;
-  padding: 1rem 0;
 }
 
 .sitemap__item {
   display: flex;
-  flex: auto;
+  flex: 1 0 0;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
   min-width: 0;
-  padding: 1rem 0;
 }
 
 .menu__item {
   display: flex;
-  flex: auto;
+  flex: 1 0 0;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
   min-width: 0;
-  padding: 1rem 0;
 }
 
 i {
@@ -595,6 +680,7 @@ svg {
 }
 
 .sitemap {
+  width: 100%;
   display: flex;
   flex: auto;
   flex-flow: column nowrap;
@@ -605,6 +691,40 @@ svg {
 .sitemap__liste {
   padding-left: 1rem;
   align-items: flex-start;
+  width: 100%;
+}
+
+.loader {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: black;
+  opacity: 0;
+  -webkit-animation: show 3s linear, hide 3s linear both;
+  animation: show 3s linear, hide 3s linear both;
+}
+.loader__spinner {
+  display: inline-block;
+  box-sizing: border-box;
+  z-index: 0;
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #9356DC;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 500ms linear infinite, switch-colors 3s linear, hide 3s linear both;
+  animation: spin 500ms linear infinite, switch-colors 3s linear, hide 3s linear both;
 }
 
 .footer {
@@ -617,12 +737,38 @@ svg {
   justify-content: space-evenly;
   min-width: 0;
 }
+@media screen and (min-width: 500px) {
+  .footer {
+    padding-left: 4rem;
+  }
+  .footer .sitemap {
+    align-items: center;
+    flex-flow: row nowrap;
+    height: 6rem;
+  }
+  .footer .sitemap__liste {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 
 .header {
   padding: unset;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  justify-self: flex-start;
 }
-.header > * {
-  display: inline-block;
+.header__bouton {
+  justify-self: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+.header .logo {
+  flex: 10;
+  justify-self: center;
 }
 
 .main {
@@ -659,7 +805,7 @@ svg {
   right: 3rem;
   top: 0;
   margin: 3px;
-  width: 20px;
+  min-width: 20px;
   background: #FF79DA;
   height: 20px;
   text-align: center;
@@ -669,7 +815,7 @@ svg {
 }
 
 .intro__bouton {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -webkit-linear-gradient(bottom left, #FF79DA, #9356DC);
   color: white;
   min-width: 240px;
   border-radius: 2rem;
@@ -682,6 +828,22 @@ svg {
   text-align: center;
 }
 
+.restaurants__liste {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.restaurants__liste .carte {
+  display: flex;
+  flex: 50%;
+}
+@media screen and (min-width: 800px) {
+  .restaurants__liste {
+    flex-flow: row wrap;
+  }
+}
+
 .localisation {
   background: linear-gradient(to bottom, #dbdbdb 1%, #EAEAEA 5%);
 }
@@ -690,7 +852,7 @@ svg {
 }
 
 .menu__bouton {
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -webkit-linear-gradient(bottom left, #FF79DA, #9356DC);
   color: white;
   min-width: 240px;
   border-radius: 2rem;
@@ -699,18 +861,24 @@ svg {
   box-shadow: 0 5px 5px 2px #dbdbdb;
 }
 .menu__image {
+  position: relative;
+  object-fit: cover;
   padding: 0;
+  margin-bottom: -3rem;
+  max-height: 50vh;
 }
 .menu__titre-principal {
   display: flex;
-  justify-content: space-between;
-  padding-top: 2rem;
-  position: relative;
-  top: -3rem;
-  border-radius: 2rem;
+  justify-content: space-around;
+  padding: 2rem 0.5rem;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  border-radius: 2rem 2rem 0 0;
 }
 .menu__entree, .menu__principal, .menu__dessert {
   text-align: start;
+  top: -5rem;
 }
 .menu__titre > .souligne {
   text-decoration: underline;
@@ -730,26 +898,55 @@ svg {
 }
 
 .plat {
-  display: flex;
-  background-color: white;
-  width: 90%;
+  background-color: #ddd;
   border-radius: 2rem;
-  box-shadow: 0 0 0.5rem #dbdbdb;
 }
 .plat__lien {
   display: flex;
-  flex-flow: column nowrap;
-  width: 100%;
 }
-.plat__titre {
-  align-self: flex-start;
-  margin: 0;
-}
-.plat__description {
+.plat__wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex: 1;
+  flex-flow: column nowrap;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.plat__prix {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 10px 10px 0;
+}
+.plat__titre, .plat__description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.plat__validation {
+  display: flex;
+  align-self: center;
+  justify-self: center;
   margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 1px;
+  opacity: 0;
+  overflow: hidden;
+  background-color: #99E2D0;
+  color: green;
+  transition: width 0.7s linear;
+}
+.plat .fa-check-circle {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #99E2D0;
+}
+.plat__lien:hover .plat__validation {
+  width: 50px;
+}
+
+main {
+  position: relative;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */

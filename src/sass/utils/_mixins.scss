@@ -1,6 +1,7 @@
 @use "sass:meta";
 @use "sass:list";
 @use "./variables" as var;
+@use "./keyframes" as kf;
 
 @mixin set-property($el) {
   // Si la propriete s'applique a un modifier
@@ -96,42 +97,6 @@
   }
 };
 
-// @mixin set-property-for-all($page: var.$structure, $exceptions...) {
-//   // Si c'est la structure entière
-//   @if type-of($value: $page) == "map" {
-//     @each $block, $elements in $page {
-//       @if not list.index($exceptions, $block) {
-//         .#{$block} {
-//           @content;
-//           @each $elem in $elements {
-//             @if not list.index($exceptions, $elem) {
-//               &__#{$elem} {
-//                 @content;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   // C'est un bloc
-//   @else if type-of($value: $page) == "list" {
-//     @each $element in $page {
-//       @if not list.index($exception, $element) {
-//         @include set-property($element) {
-//           @content;
-//         }
-//       }
-//     }
-//   }
-//   // C'est un bloc sans element, un element ou un modifier
-//   @else {
-//     @include set-property($page) {
-//       @content;
-//     }
-//   }
-// };
-
 @mixin flex-elem(
   $flex: auto,
   $flex-flow: column nowrap,
@@ -151,3 +116,26 @@
   min-width: $l;
   max-width: $l;
 };
+
+@mixin overlay($duree: 1s) {
+  &::before {
+    animation: overlay $duree;
+  }
+};
+
+@mixin loading-spinner($duree: 1s, $delai: 0s) {
+  @include overlay($duree);
+  &::after {
+    animation: spinner $duree linear $delai, loading-cursor $duree;
+  }
+};
+
+
+@mixin nouveaute($content) {
+  display: flex;
+  margin-top: 200px;
+  left: 100px;
+  z-index: 1;
+  content: $content;
+  padding: .5rem;
+}
