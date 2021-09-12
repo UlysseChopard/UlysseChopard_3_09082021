@@ -1,5 +1,7 @@
 @use "../utils/var";
 @use "../components/logo";
+@use "../components/bouton";
+@use "../components/image";
 
 .header {
     display: flex;
@@ -7,5 +9,13 @@
     align-items: center;
     &__logo {
         @include logo.standard;
+    }
+
+    &__bouton {
+        @include bouton.retour;
+    }
+
+    &__image {
+        @include image.bandeau;
     }
 }

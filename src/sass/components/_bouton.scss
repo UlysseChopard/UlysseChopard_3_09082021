@@ -1,9 +1,17 @@
 @use "../utils/var";
 
 @mixin standard {
-    pointer: inherit;
+    cursor: inherit;
     padding: var.$padding;
     border-radius: var.$border-radius;
     box-shadow: map-get(var.$box-shadow, "grey-shade");
     background: linear-gradient(to left bottom, map-get(var.$colors, "primary"), map-get(var.$colors, "secondary")); 
+}
+
+@mixin retour {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 var.$padding 0 0;
 }

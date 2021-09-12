@@ -1,0 +1,23 @@
+@use "../components/titre";
+@use "../components/texte";
+@use "../components/liste";
+@use "../components/item";
+
+.menu {
+    &__titre {
+        @include titre.special-font;
+    }
+
+    &__texte {
+        @include texte.standard;
+    }
+
+    &__liste {
+        @include liste.standard;
+    }
+
+    &__item {
+        @include item.standard;
+        background-color: map-get($map: var.$colors, $key: "standard");
+    }
+}

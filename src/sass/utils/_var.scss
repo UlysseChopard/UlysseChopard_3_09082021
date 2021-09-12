@@ -12,11 +12,11 @@ $colors: (
 
 $border-radius: 2rem;
 $padding: 1rem;
-$blur: 10px;
+$blur: 5px;
 $spread: 2px;
 $degrade: -webkit-linear-gradient(bottom left, map-get($colors, "secondary"), map-get($colors, "primary"));
 $box-shadow: (
-    "grey-shade": 0 10px $blur $spread map-get($map: $colors, $key: "grey-shade")
+    "grey-shade": 0 5px $blur $spread map-get($map: $colors, $key: "grey-shade")
 );
 $font-size: (
     "short": 1em,

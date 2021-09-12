@@ -377,17 +377,9 @@ address {
   font-style: inherit;
 }
 
-body {
-  background-color: #F6F6F6;
-}
-
 img {
   object-fit: cover;
   width: 100%;
-}
-
-.fas {
-  padding: 0 1rem 0 0;
 }
 
 i {
@@ -403,6 +395,16 @@ i {
   padding: 1rem;
   font-size: 1.5em;
   font-family: "Shrikhand";
+}
+.header__bouton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem 0 0;
+}
+.header__image {
+  max-height: 200px;
 }
 
 .main > * {
@@ -423,7 +425,12 @@ i {
 }
 
 .body {
+  background-color: #F6F6F6;
   font-family: "Roboto";
+}
+
+.fas {
+  padding: 0 1rem 0 0;
 }
 
 .presentation {
@@ -442,12 +449,12 @@ i {
   }
 }
 .presentation__item {
-  flex-flow: row nowrap;
+  box-shadow: 0 5px 5px 2px #dbdbdb;
   flex: 1;
+  border-radius: 2rem;
   background-color: #F6F6F6;
   padding: 2rem 1rem;
   margin: 1rem;
-  border-radius: 2rem;
 }
 .presentation__item:hover {
   background: #f5edff;
@@ -503,10 +510,10 @@ i {
   padding: 1rem 2rem;
 }
 .intro__bouton {
-  pointer: inherit;
+  cursor: inherit;
   padding: 1rem;
   border-radius: 2rem;
-  box-shadow: 0 10px 10px 2px #dbdbdb;
+  box-shadow: 0 5px 5px 2px #dbdbdb;
   background: linear-gradient(to left bottom, #9356DC, #FF79DA);
 }
 .intro__titre {
@@ -519,7 +526,6 @@ i {
 }
 .sitemap__item {
   flex: 1;
-  padding: 1rem;
 }
 .sitemap__icone {
   padding: 0 1rem 0 0;
@@ -551,10 +557,9 @@ i {
   border-radius: 2rem;
   overflow: hidden;
   flex-flow: column nowrap;
-  box-shadow: 0 10px 10px 2px #dbdbdb;
+  box-shadow: 0 5px 5px 2px #dbdbdb;
   flex: 1;
   border-radius: 2rem;
-  box-shadow: 0 10px 10px 2px #dbdbdb;
 }
 .carte__description {
   display: flex;

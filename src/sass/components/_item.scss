@@ -4,5 +4,8 @@
     box-shadow: map-get(var.$box-shadow, "grey-shade");
     flex: 1;
     border-radius: var.$border-radius;
-    box-shadow: map-get($map: var.$box-shadow, $key: "grey-shade");
+}
+
+@mixin base {
+    flex: 1;
 }

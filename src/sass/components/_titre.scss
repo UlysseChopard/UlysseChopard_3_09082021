@@ -4,3 +4,8 @@
     padding: 2rem var.$padding;
     font-size: map-get(var.$font-size, "large");
 }
+
+@mixin special-font {
+    @include standard;
+    font-family: map-get($map: var.$fonts, $key: "special");
+}
