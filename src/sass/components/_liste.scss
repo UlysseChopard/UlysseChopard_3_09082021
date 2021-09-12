@@ -1,0 +1,15 @@
+@use "./item";
+
+// ul, ol {
+//     display: flex;
+//     flex-flow: row wrap;
+// }
+
+@mixin standard {
+    display: flex;
+    flex-flow: row wrap;
+    @media screen and (max-width: 500px) {
+        flex-flow: column nowrap;
+    }
+    justify-content: space-evenly;
+}

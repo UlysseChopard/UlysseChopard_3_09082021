@@ -1,0 +1,5 @@
+@use "../utils/var";
+
+.body {
+    font-family: map-get($map: var.$font-family, $key: "standard");
+}

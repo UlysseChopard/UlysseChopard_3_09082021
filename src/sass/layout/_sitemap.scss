@@ -1,7 +1,28 @@
+@use "../utils/var";
+@use "../components/liste";
+
 .sitemap {
     padding: var.$padding 0;
-    flex-flow: column nowrap;
+    // @media screen and (max-width: 500px) {
+    //     &__liste {
+    //         flex-flow: column nowrap;
+    //     }
+    // }
+
     &__item {
         flex: 1;
+        padding: var.$padding;
     }
+
+    &__icone {
+        padding: 0 var.$padding 0 0;
+    }
+
+    &__liste {
+        @include liste.standard;
+    }
+}
+
+@mixin standard {
+    padding: var.$padding;
 }

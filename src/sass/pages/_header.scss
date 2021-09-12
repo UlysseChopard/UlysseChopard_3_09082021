@@ -1,6 +1,11 @@
 @use "../utils/var";
+@use "../components/logo";
 
 .header {
     display: flex;
     justify-content: center;
+    align-items: center;
+    &__logo {
+        @include logo.standard;
+    }
 }

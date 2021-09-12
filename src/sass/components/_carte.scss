@@ -1,0 +1,57 @@
+@use "../utils/var";
+@use "./favori";
+@use "./texte";
+@use "./item";
+
+.carte {
+    display: flex;
+    flex: 1;
+    padding: var.$padding;
+    &__lien {
+        display: flex;
+        flex: 1;
+    }
+
+    &__item {
+        min-width: 100%;
+        display: flex;
+        flex: 1;
+        border-radius: var.$border-radius;
+        overflow:   hidden;
+        flex-flow: column nowrap;
+        @include item.standard;
+    }
+
+    &__description {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: var.$padding;
+    }
+
+    &__image {
+        height: 200px;
+    }
+
+    &__titre {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    &__favori {
+        position: relative;
+        top: 1.5rem;
+        &:hover {
+            @include favori.degrade;
+            font-weight: 900;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    &__texte {
+        @include texte.standard;
+    }
+}

@@ -1,4 +1,7 @@
 @use "../utils/var";
+@use "../base/icones";
+@use "../components/titre";
+@use "../components/liste";
 
 .presentation {
     background-color: map-get($map: var.$colors, $key: "standard");
@@ -6,12 +9,7 @@
     flex-flow: column nowrap;
     
     &__liste {
-        display: flex;
-        flex-flow: column nowrap;
-        @media screen and (min-width: 500px) {
-            flex-flow: row wrap;
-        }
-        justify-content: space-evenly;
+        @include liste.standard;
     }
 
     &__item {
@@ -21,6 +19,12 @@
         padding: 2rem var.$padding;
         margin: 1rem;
         border-radius: var.$border-radius;
+        &:hover {
+            background: #f5edff;
+            .presentation__icone {
+                @include icones.switch-color("primary");
+            }
+        }
     }
 
     &__puce {
@@ -34,4 +38,8 @@
         border-radius: 50%;
         background-color: map-get($map: var.$colors, $key: "primary");
     }
-}
+
+    &__titre {
+        @include titre.standard;
+    }
+};

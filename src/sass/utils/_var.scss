@@ -12,6 +12,19 @@ $colors: (
 
 $border-radius: 2rem;
 $padding: 1rem;
-$blur: 1rem;
-$spread: 1rem;
+$blur: 10px;
+$spread: 2px;
 $degrade: -webkit-linear-gradient(bottom left, map-get($colors, "secondary"), map-get($colors, "primary"));
+$box-shadow: (
+    "grey-shade": 0 10px $blur $spread map-get($map: $colors, $key: "grey-shade")
+);
+$font-size: (
+    "short": 1em,
+    "medium": 1.2em,
+    "large": 1.5em
+);
+
+$font-family: (
+    "standard":"Roboto",
+    "special": "Shrikhand"
+);

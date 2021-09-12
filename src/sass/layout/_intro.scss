@@ -1,4 +1,20 @@
+@use "../utils/var";
+@use "../components/bouton";
+@use "../components/titre";
+
 .intro {
     text-align: center;
     padding: 1rem 2rem;
+
+    &__bouton {
+        @include bouton.standard;
+        // padding: var.$padding;
+        // border-radius: var.$border-radius;
+        // box-shadow: map-get(var.$box-shadow, "grey-shade");
+        // background: linear-gradient(to left bottom, map-get(var.$colors, "primary"), map-get(var.$colors, "secondary")); 
+    }
+
+    &__titre {
+        @include titre.standard;
+    }
 }

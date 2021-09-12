@@ -1,9 +1,12 @@
+@use "../components/titre";
+@use "../components/liste";
+
 .restaurants {
     &__liste {
-        display: flex;
-        flex-flow: column nowrap;
-        @media screen and (min-width: 500px) {
-            flex-flow: row wrap;
-        }
+        @include liste.standard;
+    }
+
+    &__titre {
+        @include titre.standard;
     }
 }

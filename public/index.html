@@ -32,37 +32,39 @@
   <body>
     <div class="loader"><div class="loader__spinner"></div></div>
     <header class="header">
-      <h1 class="logo">ohmyfood</h1>
+      <h1 class="header__logo">ohmyfood</h1>
     </header>
     <main class="main">
       <aside class="localisation">
-        <h2 class="localisation__titre">
+        <h2 class="localisation__texte">
           <i class="fas fa-map-marker-alt localisation__icone"></i>Paris, Belleville
         </h2>
       </aside>
       <article class="intro">
         <h2 class="intro__titre">Réservez le menu qui vous convient</h2>
-        <p>Découvrez des restaurants d'exception sélectionnés par nos soins</p>
-        <button class="intro__bouton" type="button">
-          <a href="index.html">Explorer nos restaurants</a>
-        </button>
+        <p class="intro__texte">Découvrez des restaurants d'exception sélectionnés par nos soins</p>
+        <a href="index.html">
+          <button class="intro__bouton" type="button">
+            Explorer nos restaurants
+          </button>
+        </a>
       </article>
       <section class="presentation">
         <h2 class="presentation__titre">Fonctionnement</h2>
         <ol class="presentation__liste">
           <li class="presentation__item">
             <div class="presentation__puce">1</div>
-            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-mobile-alt presentation__icone"></i>
             Choisissez un restaurant
           </li>
           <li class="presentation__item">
             <div class="presentation__puce">2</div>
-            <i class="fas fa-list-ul"></i>
+            <i class="fas fa-list-ul presentation__icone"></i>
             Composez votre menu
           </li>
           <li class="presentation__item">
             <div class="presentation__puce">3</div>
-            <i class="fas fa-store"></i>
+            <i class="fas fa-store presentation__icone"></i>
             Dégustez au restaurant
           </li>
         </ol>
@@ -72,7 +74,7 @@
         <ul class="restaurants__liste">
           <li class="carte">
             <a class="carte__lien" href="html/la-palette-du-gout-menu.html">
-            <figure class="carte__wrapper">
+            <figure class="carte__item">
                 <img
                   class="carte__image"
                   src="assets/img/restaurants/la-palette-du-gout.jpg"
@@ -82,14 +84,14 @@
                   <h3 class="carte__titre">
                     La palette du goût<a><i class="carte__favori far fa-heart"></i></a>
                   </h3>
-                  <p class="carte__lieu">Ménilmontant</p>
+                  <p class="carte__texte">Ménilmontant</p>
                 </figcaption>
               </figure>
             </a>
           </li>
           <li class="carte">
             <a class="carte__lien" href="html/la-note-enchantee-menu.html">
-              <figure class="carte__wrapper">
+              <figure class="carte__item">
                 <img
                   class="carte__image"
                   src="assets/img/restaurants/la-note-enchantee.jpg"
@@ -99,14 +101,14 @@
                   <h3 class="carte__titre">
                     La note enchantée<i class="carte__favori far fa-heart"></i>
                   </h3>
-                  <p class="carte__lieu">Charonne</p>
+                  <p class="carte__texte">Charonne</p>
                 </figcaption>
               </figure>
             </a>
           </li>
           <li class="carte">
             <a class="carte__lien" href="html/a-la-francaise-menu.html">
-              <figure class="carte__wrapper">
+              <figure class="carte__item">
                 <img
                   class="carte__image"
                   src="assets/img/restaurants/a-la-francaise.jpg"
@@ -116,14 +118,14 @@
                   <h3 class="carte__titre">
                     A la française<i class="carte__favori far fa-heart"></i>
                   </h3>
-                  <p class="carte__lieu">Cité rouge</p>
+                  <p class="carte__texte">Cité rouge</p>
                 </figcaption>
               </figure>
             </a>
           </li>
           <li class="carte">
             <a class="carte__lien" href="html/le-delice-des-sens-menu.html">
-              <figure class="carte__wrapper">
+              <figure class="carte__item">
                 <img
                   class="carte__image"
                   src="assets/img/restaurants/le-delice-des-sens.jpg"
@@ -133,7 +135,7 @@
                   <h3 class="carte__titre">
                     Le délice des sens<i class="carte__favori far fa-heart"></i>
                   </h3>
-                  <p class="carte__lieu">Folie-Méricourt</p>
+                  <p class="carte__texte">Folie-Méricourt</p>
                 </figcaption>
               </figure>
             </a>
@@ -142,14 +144,14 @@
       </section>
     </main>
     <footer class="footer">
-      <h2 class="logo">ohmyfood</h2>
-      <nav class="sitemap">
+      <h2 class="footer__logo">ohmyfood</h2>
+      <nav class="footer__sitemap sitemap">
         <ul class="sitemap__liste">
           <li class="sitemap__item">
-            <a><i class="fas fa-utensils"></i>Proposer un restaurant</a>
+            <a><i class="fas fa-utensils sitemap__icone"></i>Proposer un restaurant</a>
           </li>
           <li class="sitemap__item">
-            <a><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
+            <a><i class="fas fa-hands-helping sitemap__icone"></i>Devenir partenaire</a>
           </li>
           <li class="sitemap__item">
             <a>Mentions légales</a>
