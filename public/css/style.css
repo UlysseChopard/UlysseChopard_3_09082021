@@ -346,6 +346,8 @@ ul, ol {
 a, p {
   color: inherit;
   text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -386,15 +388,23 @@ i {
   vertical-align: center;
 }
 
+.souligne {
+  text-decoration: underline;
+  text-decoration-color: #99E2D0;
+  text-underline-offset: 10px;
+}
+
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .header__logo {
   padding: 1rem;
   font-size: 1.5em;
   font-family: "Shrikhand";
+  flex: 3;
+  justify-content: flex-start;
 }
 .header__bouton {
   flex: 1;
@@ -402,9 +412,6 @@ i {
   align-items: center;
   justify-content: flex-start;
   padding: 0 1rem 0 0;
-}
-.header__image {
-  max-height: 200px;
 }
 
 .main > * {
@@ -427,6 +434,63 @@ i {
 .body {
   background-color: #F6F6F6;
   font-family: "Roboto";
+}
+
+.bandeau {
+  padding: unset;
+  width: 100%;
+}
+.bandeau__image {
+  max-height: 200px;
+}
+.bandeau__titre {
+  padding: 2rem 1rem;
+  font-size: 1.5em;
+  font-family: "Shrikhand";
+  display: flex;
+  position: relative;
+  top: -2rem;
+  font-size: unset;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 2rem;
+  background-color: #F6F6F6;
+  overflow: hidden;
+}
+.bandeau__favori:hover {
+  background: -webkit-linear-gradient(bottom left, #FF79DA, #9356DC);
+  color: white;
+  font-weight: 900;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+
+.intro {
+  text-align: center;
+  padding: 1rem 2rem;
+}
+.intro__bouton {
+  cursor: inherit;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 5px 5px 2px #dbdbdb;
+  background: linear-gradient(to left bottom, #9356DC, #FF79DA);
+}
+.intro__titre {
+  padding: 2rem 1rem;
+  font-size: 1.5em;
+}
+
+.localisation {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to bottom, #dbdbdb 1%, #EAEAEA 5%);
+}
+.localisation__texte {
+  font-weight: 400;
+  font-size: 1em;
 }
 
 .fas {
@@ -480,16 +544,6 @@ i {
   font-size: 1.5em;
 }
 
-.localisation {
-  display: flex;
-  justify-content: center;
-  background: linear-gradient(to bottom, #dbdbdb 1%, #EAEAEA 5%);
-}
-.localisation__texte {
-  font-weight: 400;
-  font-size: 1em;
-}
-
 .restaurants__liste {
   display: flex;
   flex-flow: row wrap;
@@ -501,22 +555,6 @@ i {
   }
 }
 .restaurants__titre {
-  padding: 2rem 1rem;
-  font-size: 1.5em;
-}
-
-.intro {
-  text-align: center;
-  padding: 1rem 2rem;
-}
-.intro__bouton {
-  cursor: inherit;
-  padding: 1rem;
-  border-radius: 2rem;
-  box-shadow: 0 5px 5px 2px #dbdbdb;
-  background: linear-gradient(to left bottom, #9356DC, #FF79DA);
-}
-.intro__titre {
   padding: 2rem 1rem;
   font-size: 1.5em;
 }
@@ -539,6 +577,50 @@ i {
   .sitemap__liste {
     flex-flow: column nowrap;
   }
+}
+
+.menu {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.menu__entree, .menu__plat, .menu__dessert {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  flex: 1;
+}
+.menu__titre {
+  padding: 2rem 1rem;
+  font-size: 1.5em;
+}
+.menu__texte {
+  font-weight: 400;
+  font-size: 1em;
+}
+.menu__liste {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+@media screen and (max-width: 500px) {
+  .menu__liste {
+    flex-flow: column nowrap;
+  }
+}
+.menu__item {
+  box-shadow: 0 5px 5px 2px #dbdbdb;
+  flex: 1;
+  border-radius: 2rem;
+}
+.menu__bouton {
+  cursor: inherit;
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0 5px 5px 2px #dbdbdb;
+  background: linear-gradient(to left bottom, #9356DC, #FF79DA);
 }
 
 .carte {
@@ -590,6 +672,74 @@ i {
 .carte__texte {
   font-weight: 400;
   font-size: 1em;
+}
+
+.plat {
+  display: flex;
+  background-color: white;
+  overflow: hidden;
+  margin: 1rem;
+  justify-content: center;
+}
+.plat:hover .plat__validation {
+  width: 50px;
+}
+.plat:hover .plat__icone {
+  display: inherit;
+  transform: translateX(0) rotate(360deg);
+}
+.plat__lien {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.plat__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+.plat__titre {
+  padding: 2rem 1rem;
+  font-size: 1.5em;
+  padding: unset;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.plat__texte {
+  font-weight: 400;
+  font-size: 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.plat__prix {
+  font-size: 1.2em;
+  font-weight: 600;
+  justify-content: flex-end;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.plat__validation {
+  display: inline-block;
+  width: 0px;
+  transition: width 1s ease-in-out;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: center;
+}
+.plat__icone {
+  padding: 0;
+  transform-origin: center;
+  transform: translateX(20px) rotate(0);
+  transition: transform 1s ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

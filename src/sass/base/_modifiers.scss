@@ -1,0 +1,7 @@
+@use "../utils/var";
+
+.souligne {
+    text-decoration: underline;
+    text-decoration-color: map-get($map: var.$colors, $key: "tertiary");
+    text-underline-offset: 10px;
+}

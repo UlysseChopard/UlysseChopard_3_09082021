@@ -5,17 +5,15 @@
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     &__logo {
         @include logo.standard;
+        flex: 3;
+        justify-content: flex-start;
     }
 
     &__bouton {
         @include bouton.retour;
-    }
-
-    &__image {
-        @include image.bandeau;
     }
 }
