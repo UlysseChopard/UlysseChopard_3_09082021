@@ -16,6 +16,8 @@
 
     &__item {
         @include item.standard;
+        display: flex;
+        align-items: center;
         background-color: map-get($map: var.$colors, $key: "light-grey");
         padding: 2rem var.$padding;
         margin: 1rem;
@@ -33,5 +35,9 @@
 
     &__titre {
         @include titre.standard;
+    }
+
+    &__icone {
+        align-self: center;
     }
 };

@@ -10,9 +10,6 @@
 }
 
 @mixin retour {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 var.$padding 0 0;
+    position: relative;
+    top: -2.5rem;
 }
