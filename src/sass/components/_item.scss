@@ -2,10 +2,9 @@
 
 @mixin standard {
     box-shadow: map-get(var.$box-shadow, "grey-shade");
-    // flex: 1;
     border-radius: var.$border-radius;
 }
 
-@mixin base {
-    flex: 1;
-}
+// @mixin base {
+//     flex: 1;
+// }

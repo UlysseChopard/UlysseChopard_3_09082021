@@ -11,12 +11,13 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-evenly;
+    padding: var.$padding 0;
 
-    &__entree, &__plat, &__dessert {
+    &__entree, &__principal, &__dessert {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
-        max-width: 100%;
+        width: 100%;
     }
 
     &__titre {
@@ -33,11 +34,13 @@
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
-        max-width: 100%;
+        align-items: center;
     }
 
     &__item {
         @include item.standard;
+        flex: 1;
+        min-height: 100%;
     }
 
     &__bouton {

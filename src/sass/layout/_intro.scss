@@ -24,5 +24,6 @@
 
     &__texte {
         font-size: map-get($map: var.$font-size, $key: "large");
+        margin: 2rem;
     }
 }

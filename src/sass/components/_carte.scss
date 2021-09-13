@@ -4,50 +4,54 @@
 @use "./item";
 
 .carte {
-    display: flex;
-    padding: var.$padding;
-
-    &__lien {
-        display: flex;
-        flex: 1;
-    }
-
-    &__item {
-        @include item.standard;
-        min-width: 260px;
-        width: 265px;
-        max-width: 270px;
-        display: flex;
-        flex: auto;
-        overflow: hidden;
-        flex-flow: column nowrap;
-    }
-
-    &__description {
-        display: flex;
-        flex-flow: column nowrap;
-        padding: var.$padding;
-    }
+    flex: 1;
+    width: 250px;
 
     &__image {
         height: 200px;
     }
 
+    &__description {
+        padding: var.$padding;
+    }
+
     &__titre {
         display: flex;
-        flex-flow: row nowrap;
         justify-content: space-between;
+        margin-bottom: 1rem;
     }
 
     &__favori {
         position: relative;
         top: 1.5rem;
         &:hover {
-            @include favori.standard;
+          @include favori.standard;
         }
     }
-
-    &__texte {
-        @include texte.standard;
-    }
 }
+// .carte {
+//   &__description {
+//     display: flex;
+//     flex-flow: column nowrap;
+//     padding: var.$padding;
+//     flex: 1;
+//   }
+
+//   &__titre {
+//     display: flex;
+//     flex-flow: row nowrap;
+//     justify-content: space-between;
+//   }
+
+//   &__favori {
+//     position: relative;
+//     top: 1.5rem;
+//     &:hover {
+//       @include favori.standard;
+//     }
+//   }
+
+//   &__texte {
+//     @include texte.standard;
+//   }
+// }

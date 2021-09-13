@@ -6,8 +6,8 @@
     padding: var.$padding 0;
 
     &__item {
-        @include item.base;
         flex: auto;
+        padding: .5rem;
     }
 
     &__icone {
@@ -19,6 +19,6 @@
     }
 }
 
-@mixin standard {
-    padding: var.$padding;
-}
+// @mixin standard {
+//     padding: var.$padding;
+// }
