@@ -515,13 +515,11 @@ i {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  align-items: center;
   padding: 1rem;
 }
 @media screen and (max-width: 500px) {
   .presentation__liste {
     flex-flow: column nowrap;
-    align-items: flex-start;
   }
 }
 .presentation__item {
@@ -578,13 +576,11 @@ i {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  align-items: center;
   padding: 1rem;
 }
 @media screen and (max-width: 500px) {
   .restaurants__liste {
     flex-flow: column nowrap;
-    align-items: flex-start;
   }
 }
 .restaurants__item {
@@ -608,12 +604,10 @@ i {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  align-items: center;
 }
 @media screen and (max-width: 500px) {
   .sitemap__liste {
     flex-flow: column nowrap;
-    align-items: flex-start;
   }
 }
 
@@ -640,7 +634,6 @@ i {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  align-items: center;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
@@ -649,7 +642,6 @@ i {
 @media screen and (max-width: 500px) {
   .menu__liste {
     flex-flow: column nowrap;
-    align-items: flex-start;
   }
 }
 .menu__item {
@@ -671,7 +663,11 @@ i {
 
 .carte {
   flex: 1;
-  width: 250px;
+}
+@media screen and (min-width: 500px) {
+  .carte {
+    width: 250px;
+  }
 }
 .carte__image {
   height: 200px;
