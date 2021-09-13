@@ -8,6 +8,9 @@
 
     &__bouton {
         @include bouton.standard;
+        color: map-get($map: var.$colors, $key: "standard");
+        font-weight: map-get($map: var.$font-weight, $key:"medium");
+        margin: 1rem;
         // padding: var.$padding;
         // border-radius: var.$border-radius;
         // box-shadow: map-get(var.$box-shadow, "grey-shade");
@@ -16,5 +19,10 @@
 
     &__titre {
         @include titre.standard;
+        font-size: map-get($map: var.$font-size, $key: "large");
+    }
+
+    &__texte {
+        font-size: map-get($map: var.$font-size, $key: "large");
     }
 }

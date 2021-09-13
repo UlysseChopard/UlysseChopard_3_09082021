@@ -7,13 +7,19 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
     &__logo {
         @include logo.standard;
-        flex: 3;
-        justify-content: flex-start;
+        flex: 1;
+        text-align: center;
     }
 
     &__bouton {
         @include bouton.retour;
+        justify-content: center;
+    }
+
+    &__icone {
+        padding: var.$padding;
     }
 }

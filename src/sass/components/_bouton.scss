@@ -2,6 +2,7 @@
 
 @mixin standard {
     cursor: inherit;
+    min-width: 200px;
     padding: var.$padding;
     border-radius: var.$border-radius;
     box-shadow: map-get(var.$box-shadow, "grey-shade");

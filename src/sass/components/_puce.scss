@@ -10,4 +10,5 @@
     padding: 5px;
     border-radius: 50%;
     background-color: map-get($map: var.$colors, $key: $couleur);
+    color: map-get($map: var.$colors, $key: "standard");
 }

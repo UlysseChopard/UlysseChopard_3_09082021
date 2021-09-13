@@ -6,9 +6,8 @@
     padding: var.$padding 0;
 
     &__item {
-        // flex: 1;
-        // padding: var.$padding;
         @include item.base;
+        flex: auto;
     }
 
     &__icone {

@@ -5,21 +5,22 @@
 
 .carte {
     display: flex;
-    flex: 1;
     padding: var.$padding;
+
     &__lien {
         display: flex;
         flex: 1;
     }
 
     &__item {
-        min-width: 100%;
-        display: flex;
-        flex: 1;
-        border-radius: var.$border-radius;
-        overflow:   hidden;
-        flex-flow: column nowrap;
         @include item.standard;
+        min-width: 260px;
+        width: 265px;
+        max-width: 270px;
+        display: flex;
+        flex: auto;
+        overflow: hidden;
+        flex-flow: column nowrap;
     }
 
     &__description {
