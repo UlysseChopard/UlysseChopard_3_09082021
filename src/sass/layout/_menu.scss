@@ -38,9 +38,10 @@
     }
 
     &__item {
-        @include item.standard;
-        flex: 1;
-        min-height: 100%;
+        // @include item.standard;
+        // flex: 1;
+        // min-height: 100%;
+        background-color: white;
     }
 
     &__bouton {
