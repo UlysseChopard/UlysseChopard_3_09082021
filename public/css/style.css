@@ -680,20 +680,27 @@ i {
   overflow: hidden;
   margin: 1rem;
   justify-content: center;
+  flex: 1;
+  animation: slide-top 0.5s linear both;
 }
 .plat:hover .plat__validation {
-  width: 50px;
+  transform: translateX(0%);
 }
 .plat:hover .plat__icone {
   display: inherit;
   transform: translateX(0) rotate(360deg);
+}
+.plat:hover .plat__prix {
+  transform: translateX(-50%);
 }
 .plat__lien {
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  min-width: 0;
+  width: 90%;
+  overflow: hidden;
 }
 .plat__wrapper {
   display: flex;
@@ -711,6 +718,7 @@ i {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  min-width: 0;
 }
 .plat__texte {
   font-weight: 400;
@@ -718,28 +726,50 @@ i {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  min-width: 0;
 }
 .plat__prix {
+  display: flex;
   font-size: 1.2em;
   font-weight: 600;
-  justify-content: flex-end;
-  overflow: hidden;
+  flex: 1;
   white-space: nowrap;
+  transform: translateX(50%);
+  transform-origin: right;
+  transition: transform 1s ease-in-out;
 }
 .plat__validation {
+  background-color: #99E2D0;
   display: inline-block;
-  width: 0px;
-  transition: width 1s ease-in-out;
+  width: 50px;
+  height: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
+  transform: translateX(100%);
+  transition: transform 1s ease-in-out;
 }
 .plat__icone {
+  color: white;
+  position: relative;
+  top: 35%;
+  vertical-align: middle;
   padding: 0;
   transform-origin: center;
   transform: translateX(20px) rotate(0);
   transition: transform 1s ease-in-out;
+}
+
+@keyframes slide-top {
+  from {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
