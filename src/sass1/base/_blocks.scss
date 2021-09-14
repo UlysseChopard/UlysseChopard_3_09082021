@@ -1,7 +1,0 @@
-@use "../utils/variables" as var;
-@use "../utils/mixins";
-
-// Padding pour tous les blocs
-@include mixins.set-property-for-level("blocs") {
-    text-align: center;
-};

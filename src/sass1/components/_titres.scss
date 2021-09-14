@@ -1,8 +1,0 @@
-@use "../utils/mixins";
-@use "../utils/variables" as var;
-
-@include mixins.set-property("titre") {
-    padding: map-get($map: var.$padding, $key: "titre");
-    font-weight: bold;
-    margin: 0;
-}
