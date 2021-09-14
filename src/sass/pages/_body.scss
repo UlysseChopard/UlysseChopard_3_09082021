@@ -1,6 +1,24 @@
+@use "sass:color";
+
 @use "../utils/var";
+@use "../layout/spinner";
+
+$duree: random(3) + s;
+$background-color: map-get(var.$colors, "light-grey");
 
 .body {
-    background-color: map-get(var.$colors, "light-grey");
+    background-color: $background-color;
     font-family: map-get($map: var.$font-family, $key: "standard");
+    // Pour le spinner et l'overlay du spinner
+    animation: overlay $duree both;
+    @include spinner.loading($duree: $duree);
+}
+
+@keyframes overlay {
+    from {
+        display: inline-block;
+        z-index: 4;
+        background-color:map-get($map: var.$colors, $key: "grey-shade");
+        opacity: .6;
+    }
 }
