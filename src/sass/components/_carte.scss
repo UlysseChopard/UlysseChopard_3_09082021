@@ -5,6 +5,7 @@
 
 .carte {
     flex: 1;
+    margin-top: -2rem;
     @media screen and (min-width: 500px) {
         width: 250px;
     }
@@ -31,29 +32,3 @@
         }
     }
 }
-// .carte {
-//   &__description {
-//     display: flex;
-//     flex-flow: column nowrap;
-//     padding: var.$padding;
-//     flex: 1;
-//   }
-
-//   &__titre {
-//     display: flex;
-//     flex-flow: row nowrap;
-//     justify-content: space-between;
-//   }
-
-//   &__favori {
-//     position: relative;
-//     top: 1.5rem;
-//     &:hover {
-//       @include favori.standard;
-//     }
-//   }
-
-//   &__texte {
-//     @include texte.standard;
-//   }
-// }

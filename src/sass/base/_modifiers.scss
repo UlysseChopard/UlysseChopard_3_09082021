@@ -1,7 +1,24 @@
 @use "../utils/var";
+@use "sass:color";
 
 .souligne {
     text-decoration: underline;
     text-decoration-color: map-get($map: var.$colors, $key: "tertiary");
     text-underline-offset: 10px;
+}
+
+$green: map-get($map: var.$colors, $key: "tertiary");
+
+.nouveaute {
+    &::before {
+        content: "Nouveau";
+        position: relative;
+        color: color.scale($green, $lightness: -50%);
+        background-color: $green;
+        font-weight: map-get(var.$font-weight, "medium");
+        top: 4rem;
+        padding: .5rem;
+        right: -70%;
+        border-radius: 2px;
+    }
 }
