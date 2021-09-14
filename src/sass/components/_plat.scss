@@ -1,148 +1,79 @@
 @use "../utils/var";
-@use "../components/texte";
-@use "../components/titre";
-
-// .plat {
-//   display: flex;
-//   flex-flow: column nowrap;
-//   overflow: hidden;
-//   height: 100%;
-//   width: 80%;
-
-//   background-color: map-get($map: var.$colors, $key: "standard");
-//   margin: 1rem;
-//   animation: slide-top 0.5s linear both;
-
-//   &__lien {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     min-width: 0;
-//     overflow: hidden;
-//   }
-
-//   &__wrapper {
-//     display: flex;
-//     flex-flow: column nowrap;
-//     justify-content: space-between;
-//     flex: 1;
-//     overflow: hidden;
-//     min-width: 0;
-//     height: 100%;
-//   }
-
-//   &__titre {
-//     @include titre.standard;
-//     display: inline-block;
-//     padding: unset;
-//     text-overflow: ellipsis;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     min-width: 0;
-//   }
-
-//   &__texte {
-//     display: inline-block;
-//     @include texte.standard;
-//     text-overflow: ellipsis;
-//     overflow: hidden;
-//     white-space: nowrap;
-//     min-width: 0;
-//   }
-
-//   &__prix {
-//     display: block;
-//     font-size: map-get($map: var.$font-size, $key: "medium");
-//     font-weight: map-get($map: var.$font-weight, $key: "medium");
-//     white-space: nowrap;
-//   }
-
-//   &__validation {
-//     display: flex;
-//     width: 0px;
-//     min-height: 100%;
-//     margin: 0;
-//     padding: 0;
-//     text-align: center;
-//     vertical-align: middle;
-
-//     transition: width 1s ease-in-out;
-
-//     background-color: map-get($map: var.$colors, $key: "tertiary");
-//   }
-
-//   &:hover &__validation {
-//       width: 50px;
-//   }
-
-//   &__icone {
-//     color: map-get($map: var.$colors, $key: "standard");
-//     position: relative;
-//     top: 50%;
-//     min-height: 100%;
-//     flex: 1;
-//     vertical-align: middle;
-//     padding: 0;
-//     transform-origin: center;
-//     transform: rotate(0);
-//     transition: all 1s ease-in-out;
-//     content: "";
-//   }
-
-//   &:hover &__icone {
-//     transform: rotate(360deg);
-//     content: "\f058";
-//   }
-// }
-
-// @keyframes slide-top {
-//   from {
-//     transform: translateY(100px);
-//     opacity: 0;
-//   }
-//   50% {
-//     transform: translateY(50px);
-//     opacity: 0.5;
-//   }
-//   to {
-//     transform: translateY(0);
-//     opacity: 1;
-//   }
-// }
+@use "./texte";
+@use "./titre";
+@use "./item";
 
 .plat {
+  @include item.standard(1rem);
   display: flex;
-  width: 250px;
+  width: 100%;
   margin: 1rem 0;
   overflow: hidden;
-  text-overflow: ellipsis;
+  cursor: pointer;
+  animation: slide-top 0.5s linear both;
   
   &__prix {
     flex: 1;
-    margin-top: 10%;
+    align-self: flex-end;
+    padding: var.$padding;
   }
   
   &__description {
     display: flex;
     flex-flow: column nowrap;
-    flex: 5;
-    padding: 1rem;
+    flex: 10;
+    padding: 1rem 0 1rem 1rem;
+    min-width: 0;
   }
 
   &__titre, &__texte {
     flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: map-get(var.$font-size, "small");
   }
 
   &__icone {
-    display: flex;
-    flex: 1;
-    margin-right: -5rem;
-    border: black 2px solid;
-    background: green;
-    transition: margin-right 1s linear;
-    padding: unset;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: map-get($map: var.$colors, $key: "tertiary");
+    color: white;
+    transition: transform 300ms 50ms ease-in-out;
   }
+
+  &__validation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 0;
+    overflow: hidden;
+    background-color: map-get($map: var.$colors, $key: "tertiary");
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover &__validation {
+    width: 50px;
+  }
+
   &:hover &__icone {
-    margin-right: 0;
+    transform: rotate(360deg);
   }
 }
+
+@keyframes slide-top {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

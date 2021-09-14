@@ -11,37 +11,30 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-evenly;
-    padding: var.$padding 0;
-
+    padding: var.$padding 0 4rem 0;
+    
     &__entree, &__principal, &__dessert {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
         width: 100%;
+        padding: 4rem 0 0 0;
+        @media screen and (min-width: 500px) {
+            width: 50%;
+        }
     }
 
     &__titre {
-        @include titre.standard;
+        @include titre.standard(0 var.$padding);
         align-self: flex-start;
     }
 
-    // &__texte {
-    //     @include texte.standard;
-    // }
-
     &__liste {
         @include liste.standard;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-evenly;
+        align-self: center;
         align-items: center;
-    }
-
-    &__item {
-        // @include item.standard;
-        // flex: 1;
-        // min-height: 100%;
-        background-color: white;
+        width: 98%;
+        padding: var.$padding 0;
     }
 
     &__bouton {

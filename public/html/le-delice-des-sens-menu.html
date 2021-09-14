@@ -19,42 +19,158 @@
 
     <meta name="author" content="Ulysse Chopard" />
     <meta name="description" content="restaurant app" />
+
     <title>Ohmyfood</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
+  <body class="body">
     <header class="header">
-      <h1 class="logo">ohmyfood</h1>
-      <button type="button">
-        <a href="index.html">Accueil</a>
+      <h1 class="header__logo">ohmyfood</h1>
+      <button type="button" class="header__bouton">
+        <a href="index.html"><i class="header__icone fas fa-arrow-left"></i></a>
       </button>
     </header>
-    <main class="main">
-        <section>
-            <h2>Entrées</h2>
-        </section>
-        <section>
-            <h2>Plats</h2>
-        </section>
-        <section>
-            <h2>Desserts</h2>
-        </section>
-        <button type="button">Commander</button>
+    <main class="main menu">
+      <div class="bandeau">
+        <img
+          class="bandeau__image"
+          src="assets/img/restaurants/le-delice-des-sens.jpg"
+          alt="restaurant a la française"
+        />
+        <div class="bandeau__titre">
+          <h1 class="bandeau__texte">Le délice des sens</h1><i class="bandeau__favori far fa-heart"></i>
+        </div>
+      </div>
+      <section class="menu__entree">
+        <h2 class="menu__titre"><strong class="souligne">Entr</strong>ées</h2>
+        <ul class="menu__liste">
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Tartare de thon</h3>
+              <p class="plat__texte">Assaisonné au yuzu</p>
+            </div>
+            <span class="plat__prix">25€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Bouchée de homard croustillant </h3>
+              <p class="plat__texte">Et sa farandole de petits légumes</p>
+            </div>
+            <span class="plat__prix">35€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Velouté de cèpes</h3>
+              <p class="plat__texte">Aux truffes</p>
+            </div>
+            <span class="plat__prix">20€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="menu__principal">
+        <h2 class="menu__titre"><strong class="souligne">Plat</strong>s</h2>
+        <ul class="menu__liste">
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Poulet rôti aux herbes de Provence </h3>
+              <p class="plat__texte">Et sa crème de truffe</p>
+            </div>
+            <span class="plat__prix">40€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Langouste rôtie</h3>
+              <p class="plat__texte">Et ses légumes de saison</p>
+            </div>
+            <span class="plat__prix">35€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Côte de boeuf Angus</h3>
+              <p class="plat__texte">Et sa purée de panais</p>
+            </div>
+            <span class="plat__prix">44€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="menu__dessert">
+        <h2 class="menu__titre"><strong class="souligne">Dess</strong>erts</h2>
+        <ul class="menu__liste">
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Farandole de desserts</h3>
+              <p class="plat__texte">Du chef</p>
+            </div>
+            <span class="plat__prix">18€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Crème brulée </h3>
+              <p class="plat__texte">Revisitée</p>
+            </div>
+            <span class="plat__prix">22€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+          <li class="menu__item plat">
+            <div class="plat__description">
+              <h3 class="plat__titre">Tiramisu</h3>
+              <p class="plat__texte">À la noisette</p>
+            </div>
+            <span class="plat__prix">23€</span>
+            <div class="plat__validation">
+              <i class="plat__icone fas fa-check-circle"></i>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <div class="menu__conteneur">
+        <button type="button" class="menu__bouton">Commander</button>
+      </div>
     </main>
     <footer class="footer">
       <h2 class="logo">ohmyfood</h2>
       <nav class="sitemap">
-        <ul>
-          <li>
-            <a>Proposer un restaurant</a>
+        <ul class="sitemap__liste">
+          <li class="sitemap__item">
+            <a><i class="fas fa-utensils"></i>Proposer un restaurant</a>
           </li>
-          <li>
-            <a>Devenir partenaire</a>
+          <li class="sitemap__item">
+            <a><i class="fas fa-hands-helping"></i>Devenir partenaire</a>
           </li>
-          <li>
+          <li class="sitemap__item">
             <a>Mentions légales</a>
           </li>
-          <li>
-            <address>
+          <li class="sitemap__item">
+            <address class="sitemap__contact">
               <a href="mailto:ohmyfood@codeu.site">Contact</a>
             </address>
           </li>
@@ -63,44 +179,3 @@
     </footer>
   </body>
 </html>
-
-Le délice des sens
-
-Entrées
-Tartare de thon
-Assaisonné au yuzu
-25€
-
-Bouchée de homard croustillant 
-Et sa farandole de petits légumes
-35€
-
-Velouté de cèpes 
-Aux truffes
-20€
-        
-Plats
-Poulet rôti aux herbes de Provence 
-Et sa crème de truffe
-40€
-
-Langouste rôtie 
-Et ses légumes de saison
-35€
-
-Côte de boeuf Angus 
-Et sa purée de panais
-44€
-
-Desserts
-Farandole de desserts
-Du chef
-18€
-
-Crème brulée 
-Revisitée
-22€
-
-Tiramisu 
-À la noisette
-23€

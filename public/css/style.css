@@ -407,6 +407,7 @@ i {
 .header__bouton {
   position: relative;
   top: -2.5rem;
+  left: 1rem;
 }
 
 .footer {
@@ -497,7 +498,7 @@ i {
 }
 .localisation__texte {
   font-weight: 400;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .fas {
@@ -616,16 +617,22 @@ i {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
-  padding: 1rem 0;
+  padding: 1rem 0 4rem 0;
 }
 .menu__entree, .menu__principal, .menu__dessert {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   width: 100%;
+  padding: 4rem 0 0 0;
+}
+@media screen and (min-width: 500px) {
+  .menu__entree, .menu__principal, .menu__dessert {
+    width: 50%;
+  }
 }
 .menu__titre {
-  padding: 2rem 1rem;
+  padding: 0 1rem;
   font-size: 1.5em;
   align-self: flex-start;
 }
@@ -633,18 +640,15 @@ i {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-evenly;
+  align-self: center;
   align-items: center;
+  width: 98%;
+  padding: 1rem 0;
 }
 @media screen and (max-width: 500px) {
   .menu__liste {
     flex-flow: column nowrap;
   }
-}
-.menu__item {
-  background-color: white;
 }
 .menu__bouton {
   color: white;
@@ -691,36 +695,70 @@ i {
 }
 
 .plat {
+  box-shadow: 0 5px 5px 2px #dbdbdb;
+  border-radius: 1rem;
   display: flex;
-  width: 250px;
+  width: 100%;
   margin: 1rem 0;
   overflow: hidden;
-  text-overflow: ellipsis;
+  cursor: pointer;
+  animation: slide-top 0.5s linear both;
 }
 .plat__prix {
   flex: 1;
-  margin-top: 10%;
+  align-self: flex-end;
+  padding: 1rem;
 }
 .plat__description {
   display: flex;
   flex-flow: column nowrap;
-  flex: 5;
-  padding: 1rem;
+  flex: 10;
+  padding: 1rem 0 1rem 1rem;
+  min-width: 0;
 }
 .plat__titre, .plat__texte {
   flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .plat__icone {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: #99E2D0;
+  color: white;
+  transition: transform 300ms 50ms ease-in-out;
+}
+.plat__validation {
   display: flex;
-  flex: 1;
-  margin-right: -5rem;
-  border: black 2px solid;
-  background: green;
-  transition: margin-right 1s linear;
-  padding: unset;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 0;
+  overflow: hidden;
+  background-color: #99E2D0;
+  transition: width 0.3s ease-in-out;
+}
+.plat:hover .plat__validation {
+  width: 50px;
 }
 .plat:hover .plat__icone {
-  margin-right: 0;
+  transform: rotate(360deg);
+}
+
+@keyframes slide-top {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

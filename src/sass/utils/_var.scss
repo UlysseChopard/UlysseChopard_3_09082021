@@ -19,7 +19,7 @@ $box-shadow: (
     "grey-shade": 0 5px $blur $spread map-get($map: $colors, $key: "grey-shade")
 );
 $font-size: (
-    "short": 1em,
+    "short": .8em,
     "medium": 1.2em,
     "large": 1.5em
 );
