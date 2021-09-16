@@ -1,9 +1,10 @@
 @use "../utils/var";
 
 @mixin standard {
+    cursor: pointer;
+    appearance: button;
     color: map-get($map: var.$colors, $key: "standard");
     font-weight: map-get($map: var.$font-weight, $key: "medium");
-    cursor: inherit;
     min-width: 200px;
     padding: var.$padding;
     border-radius: var.$border-radius;
