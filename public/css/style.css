@@ -417,6 +417,9 @@ i {
   max-width: 100%;
 }
 .header__bouton {
+  -moz-appearance: button-arrow-previous;
+  -webkit-appearance: button-arrow-previous;
+  appearance: button-arrow-previous;
   position: relative;
   top: -2.5rem;
   left: 1rem;
@@ -443,6 +446,9 @@ i {
 @keyframes hide {
   to {
     content: none;
+    display: none;
+    z-index: -2;
+    animation-play-state: paused;
   }
 }
 .body {
@@ -465,7 +471,7 @@ i {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 800ms infinite linear both, hide 0s 2s forwards;
+  animation: spin 800ms infinite linear both, hide 0s 2s both;
 }
 
 @keyframes overlay {
@@ -513,7 +519,10 @@ i {
 
 .intro {
   text-align: center;
-  padding: 1rem 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 .intro__bouton {
   cursor: pointer;
@@ -521,6 +530,7 @@ i {
   color: white;
   font-weight: 600;
   min-width: 200px;
+  width: 300px;
   padding: 1rem;
   border-radius: 2rem;
   box-shadow: 0 5px 5px 2px #dbdbdb;
@@ -536,7 +546,7 @@ i {
 }
 .intro__texte {
   font-size: 1.5em;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .localisation {
@@ -705,6 +715,7 @@ i {
   color: white;
   font-weight: 600;
   min-width: 200px;
+  width: 300px;
   padding: 1rem;
   border-radius: 2rem;
   box-shadow: 0 5px 5px 2px #dbdbdb;

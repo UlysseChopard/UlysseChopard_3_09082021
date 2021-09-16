@@ -4,7 +4,11 @@
 
 .intro {
     text-align: center;
-    padding: 1rem 2rem;
+    // padding: 1rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 
     &__bouton {
         @include bouton.standard;
@@ -24,6 +28,6 @@
 
     &__texte {
         font-size: map-get($map: var.$font-size, $key: "large");
-        margin: 2rem;
+        margin: 1rem;
     }
 }

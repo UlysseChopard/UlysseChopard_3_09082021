@@ -6,6 +6,7 @@
     color: map-get($map: var.$colors, $key: "standard");
     font-weight: map-get($map: var.$font-weight, $key: "medium");
     min-width: 200px;
+    width: 300px;
     padding: var.$padding;
     border-radius: var.$border-radius;
     box-shadow: map-get(var.$box-shadow, "grey-shade");
@@ -13,6 +14,9 @@
 }
 
 @mixin retour {
+    -moz-appearance: button-arrow-previous;
+    -webkit-appearance: button-arrow-previous;
+    appearance: button-arrow-previous;
     position: relative;
     top: -2.5rem;
     left: 1rem;

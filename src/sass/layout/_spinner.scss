@@ -17,7 +17,7 @@
         border-radius: 50%;
         width: 50px;
         height: 50px;
-        animation: spin 800ms infinite linear both, hide 0s $duree forwards;
+        animation: spin 800ms infinite linear both, hide 0s $duree both;
     }
 };
 
@@ -30,5 +30,8 @@
 @keyframes hide {
     to {
         content: none;
+        display: none;
+        z-index: -2;
+        animation-play-state: paused;
     }
 }
