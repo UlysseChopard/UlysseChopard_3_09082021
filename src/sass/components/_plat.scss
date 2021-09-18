@@ -10,6 +10,8 @@
   margin: 1rem 0;
   overflow: hidden;
   cursor: pointer;
+  -webkit-animation: slide-top 0.5s linear both;
+  -moz-animation: slide-top 0.5s linear both;
   animation: slide-top 0.5s linear both;
   
   &__prix {

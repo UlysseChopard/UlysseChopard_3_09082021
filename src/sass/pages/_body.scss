@@ -10,6 +10,8 @@ $background-color: map-get(var.$colors, "light-grey");
     background-color: $background-color;
     font-family: map-get($map: var.$font-family, $key: "standard");
     // Pour le spinner et l'overlay du spinner
+    -moz-animation: overlay $duree both;
+    -webkit-animation: overlay $duree both;
     animation: overlay $duree both;
     @include spinner.loading($duree: $duree);
 }
