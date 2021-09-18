@@ -1,12 +1,11 @@
-@use "../utils/mixins";
-@use "../utils/variables" as var;
-
-ul, ul > li, figure, figcaption {
+// Pas de point devant les listes
+ul, ol {
     list-style-type: none;
-    margin: 0;
-    padding-inline-start: 0;
+    padding: unset;
+    margin: unset;
 }
 
+// Pas de couleur ni de soulignement pour les elements p et a
 a, p {
     color: inherit;
     text-decoration: none;
@@ -14,21 +13,40 @@ a, p {
     padding: 0;
 }
 
-// Tous les titres avec un padding et sans marge par defaut
-h {
-    @for $i from 1 through 4 {
-        &#{$i} {
-            margin: 0;
-            padding: 0;
-        }
-    }
+button {
+    border: unset;
 }
 
-// Par defaut, tous les elements, sauf les images, occupent 100% de la largeur
-@include mixins.set-property-for-all(var.$structure, "image") {
-    @include mixins.largeur(100%);
+main {
+    padding: 0;
 }
 
-@include mixins.set-property-for-all(var.$structure, "liste") {
-    @include mixins.flex-elem();
+button {
+    background-color: inherit;
+}
+
+strong {
+    font-weight: inherit;
+}
+
+figure {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+address {
+    font-style: inherit;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+i {
+    vertical-align: baseline;
 }

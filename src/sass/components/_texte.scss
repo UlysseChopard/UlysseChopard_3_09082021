@@ -1,0 +1,6 @@
+@use "../utils/var";
+
+@mixin standard {
+    font-weight: 400;
+    font-size: map-get($map: var.$font-size, $key: "short");
+}

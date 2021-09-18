@@ -1,6 +1,7 @@
-@use "../utils/mixins";
-@use "../utils/variables" as var;
+@use "../utils/var";
 
-@include mixins.set-property("logo") {
-    padding: map-get($map: var.$padding, $key: "logo");
+@mixin standard {
+    padding: var.$padding;
+    font-size: map-get($map: var.$font-size, $key: "large");
+    font-family: map-get($map: var.$font-family, $key: "special");
 }

@@ -1,8 +1,0 @@
-@use "../utils/variables" as var;
-@use "../utils/mixins";
-
-@include mixins.set-property("item") {
-    @include mixins.flex-elem($flex-flow: row nowrap, $justify-content: flex-start);
-    display: list-item;
-    padding: map-get($map: var.$padding, $key: "list-item");
-}

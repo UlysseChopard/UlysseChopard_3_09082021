@@ -1,9 +1,14 @@
-@use "../utils/variables" as var;
-@use "../utils/mixins";
+@use "../utils/var";
+@use "../components/texte";
 
-@include mixins.set-property(map-get(var.$structure, "localisation")) {
-    background-color: map-get($map: var.$colors, $key: "light-black");
-    padding: map-get($map: var.$padding, $key: "localisation");
-    border-style: ridge none none none;
-    @include mixins.flex-elem($flex-flow: row nowrap);
+.localisation {
+    display: flex;
+    justify-content: center;
+    padding: var.$padding;
+
+    background: linear-gradient(to bottom, map-get(var.$colors, "grey-shade") 1%, map-get(var.$colors, "light-black") 5%);
+    
+    &__texte {
+        @include texte.standard;
+    }
 }

@@ -1,0 +1,49 @@
+@use "../utils/var";
+@use "../components/logo";
+@use "../components/bouton";
+@use "../components/image";
+
+// .header {
+//     // display: flex;
+//     // justify-content: flex-start;
+//     // align-items: center;
+
+//     &__logo {
+//         @include logo.standard;
+//         // flex: 1;
+//         position: relative;
+//         text-align: center;
+//         top: -3rem;
+//         z-index: 1;
+//     }
+
+//     &__bouton {
+//         @include bouton.retour;
+//         // justify-content: center;
+//         // flex: initial;
+//         position: relative;
+//         top: 0;
+//         left: 0;
+//         z-index: 2;
+//         width: fit-content;
+//         padding: var.$padding;
+//     }
+
+//     &__icone {
+//         padding: var.$padding;
+//     }
+// }
+
+.header {
+    max-height: 3rem;
+
+    &__logo {
+        @include logo.standard;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    &__bouton {
+       @include bouton.retour;
+    }
+}

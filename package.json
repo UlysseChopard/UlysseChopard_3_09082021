@@ -11,9 +11,10 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": "sass src/css/style.prefix.css:public/css/style.css --no-source-map --style=compressed",
     "build": "npm-run-all compile:sass prefix:css compress:css",
-    "test:css": "w3c-css https://chopard.ulysse.gitlab.io/ulyssechopard_3_09082021/ > ./.test/css.txt || exit 0",
-    "test:html": "html-validator --file=./public/index.html --verbose > ./.test/html.txt || exit 0",
-    "test": "npm-run-all --parallel test:css test:html"
+    "test:local/html": "html-validator --file=./public/index.html --verbose > ./.test/html.txt || exit 0",
+    "test:web/css": "w3c-css https://chopard.ulysse.gitlab.io/ulyssechopard_3_09082021/ > ./.test/css.txt || exit 0",
+    "test:web/html": "site-validator https://ulyssechopard.github.io/UlysseChopard_3_09082021/ --verbose --output html-test && mv html-test.json ./.test/ || exit 0",
+    "test:web": "npm-run-all --parallel test:web/css test:web/html"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "html-validator-cli": "^7.0.1",
     "live-server": "^1.2.1",
+    "site-validator-cli": "^1.3.5",
     "w3c-css": "^2.0.2"
   }
 }

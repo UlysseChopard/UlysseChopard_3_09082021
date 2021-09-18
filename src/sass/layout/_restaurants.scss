@@ -1,5 +1,21 @@
-@use "../utils/variables" as var;
+@use "../components/titre";
+@use "../components/liste";
+@use "../components/item";
+@use "../utils/var";
 
 .restaurants {
-    background-color: map-get($map: var.$colors, $key: "light-grey");
+  &__titre {
+    @include titre.standard;
+  }
+
+  &__liste {
+    @include liste.standard;
+    padding: var.$padding;
+  }
+
+  &__item {
+    @include item.standard;
+    overflow: hidden;
+    margin: 1rem;
+  }
 }

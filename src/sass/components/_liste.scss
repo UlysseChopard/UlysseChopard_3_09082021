@@ -1,19 +1,15 @@
-@use "../utils/variables" as var;
-@use "../utils/mixins";
+@use "./item";
 
-// Listes
-// @each $block in var.$structure {
-//     .#{$block} {
-//         &__liste {
-//             max-width: 400px;
-//             @include mixins.flex-elem($align-items: flex-start);
-//         }
-//         &__item {
-//             height: map-get($map: var.$height, $key: "list-item");
-//         }
-//     }
+// ul, ol {
+//     display: flex;
+//     flex-flow: row wrap;
 // }
 
-@include mixins.set-property("liste") {
-    @include mixins.flex-elem();
+@mixin standard {
+    display: flex;
+    flex-flow: row wrap;
+    @media screen and (max-width: 500px) {
+        flex-flow: column nowrap;
+    }
+    justify-content: space-evenly;
 }

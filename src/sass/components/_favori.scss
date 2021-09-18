@@ -1,0 +1,19 @@
+@use "../utils/var";
+
+@mixin degrade {
+    background: var.$degrade;
+    color: map-get(var.$colors, "standard");
+};
+
+@mixin inversion {
+    font-weight: 900;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    cursor: pointer;
+}
+
+@mixin standard {
+    @include degrade;
+    @include inversion;
+}

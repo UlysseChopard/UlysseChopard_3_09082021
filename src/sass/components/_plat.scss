@@ -1,0 +1,81 @@
+@use "../utils/var";
+@use "./texte";
+@use "./titre";
+@use "./item";
+
+.plat {
+  @include item.standard(1rem);
+  display: flex;
+  width: 100%;
+  margin: 1rem 0;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-animation: slide-top 0.5s linear both;
+  -moz-animation: slide-top 0.5s linear both;
+  animation: slide-top 0.5s linear both;
+  
+  &__prix {
+    flex: 1;
+    align-self: flex-end;
+    padding: var.$padding;
+  }
+  
+  &__description {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 10;
+    padding: 1rem 0 1rem 1rem;
+    min-width: 0;
+  }
+
+  &__titre, &__texte {
+    flex: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: map-get(var.$font-size, "small");
+  }
+
+  &__icone {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: map-get($map: var.$colors, $key: "tertiary");
+    color: white;
+    transition: transform 300ms 50ms ease-in-out;
+  }
+
+  &__validation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 0;
+    overflow: hidden;
+    background-color: map-get($map: var.$colors, $key: "tertiary");
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover &__validation {
+    width: 50px;
+  }
+
+  &:hover &__icone {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-top {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
