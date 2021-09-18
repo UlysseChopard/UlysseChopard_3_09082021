@@ -6,7 +6,7 @@
     color: map-get($map: var.$colors, $key: "standard");
     font-weight: map-get($map: var.$font-weight, $key: "medium");
     min-width: 200px;
-    width: 300px;
+    width: 250px;
     padding: var.$padding;
     border-radius: var.$border-radius;
     box-shadow: map-get(var.$box-shadow, "grey-shade");

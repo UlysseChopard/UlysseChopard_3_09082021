@@ -4,6 +4,7 @@
 @use "../utils/var";
 
 .restaurants {
+  padding: var.$padding 0;
   &__titre {
     @include titre.standard;
   }
