@@ -1,0 +1,43 @@
+@use "../components/titre";
+@use "../components/texte";
+@use "../components/liste";
+@use "../components/item";
+@use "../components/bouton";
+@use "../utils/var";
+
+.menu {
+    background-color: map-get($map: var.$colors, $key: "light-grey");
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var.$padding 0 4rem 0;
+    
+    &__entree, &__principal, &__dessert {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+        padding: 4rem 0 0 0;
+        @media screen and (min-width: 500px) {
+            width: 50%;
+        }
+    }
+
+    &__titre {
+        @include titre.standard(0 var.$padding);
+        align-self: flex-start;
+    }
+
+    &__liste {
+        @include liste.standard;
+        align-self: center;
+        align-items: center;
+        width: 98%;
+        padding: var.$padding 0;
+    }
+
+    &__bouton {
+        @include bouton.standard;
+    }
+}

@@ -1,0 +1,33 @@
+@use "../utils/var";
+@use "../components/bouton";
+@use "../components/titre";
+
+.intro {
+    text-align: center;
+    // padding: 1rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    &__bouton {
+        @include bouton.standard;
+        color: map-get($map: var.$colors, $key: "standard");
+        font-weight: map-get($map: var.$font-weight, $key:"medium");
+        margin: 1rem;
+        // padding: var.$padding;
+        // border-radius: var.$border-radius;
+        // box-shadow: map-get(var.$box-shadow, "grey-shade");
+        // background: linear-gradient(to left bottom, map-get(var.$colors, "primary"), map-get(var.$colors, "secondary")); 
+    }
+
+    &__titre {
+        @include titre.standard;
+        font-size: map-get($map: var.$font-size, $key: "large");
+    }
+
+    &__texte {
+        font-size: map-get($map: var.$font-size, $key: "large");
+        margin: 1rem;
+    }
+}

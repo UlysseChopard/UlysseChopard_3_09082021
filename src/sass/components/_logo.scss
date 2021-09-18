@@ -1,0 +1,7 @@
+@use "../utils/var";
+
+@mixin standard {
+    padding: var.$padding;
+    font-size: map-get($map: var.$font-size, $key: "large");
+    font-family: map-get($map: var.$font-family, $key: "special");
+}

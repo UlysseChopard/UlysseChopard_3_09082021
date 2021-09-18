@@ -1,0 +1,6 @@
+@use "../utils/var";
+
+@mixin standard($border-radius: var.$border-radius) {
+    box-shadow: map-get(var.$box-shadow, "grey-shade");
+    border-radius: $border-radius;
+}

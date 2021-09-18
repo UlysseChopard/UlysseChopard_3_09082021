@@ -1,0 +1,11 @@
+@use "../utils/var";
+
+.fas {
+    padding: 0 var.$padding 0 0;
+}
+
+@mixin switch-color($color) {
+    color: map-get($map: var.$colors, $key: $color);
+    background-clip: text;
+    -webkit-background-clip: text;
+}

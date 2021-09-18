@@ -1,0 +1,14 @@
+@use "../utils/var";
+@use "../components/texte";
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    padding: var.$padding;
+
+    background: linear-gradient(to bottom, map-get(var.$colors, "grey-shade") 1%, map-get(var.$colors, "light-black") 5%);
+    
+    &__texte {
+        @include texte.standard;
+    }
+}
