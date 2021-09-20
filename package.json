@@ -7,6 +7,8 @@
     "watch:sass": "sass --watch src/sass/main.scss:public/css/style.css --style expanded",
     "devserver": "live-server --port=80 --host=localhost --open=public/ --cors --verbose --no-css-inject",
     "start": "npm-run-all --parallel devserver watch:sass",
+    "devserver:pres": "live-server --port=8080 --host=localhost --open=presentation/ --cors --verbose --no-css-inject",
+    "start:pres": "npm-run-all --parallel start devserver:pres",
     "compile:sass": "sass src/sass/main.scss:src/css/style.comp.css --no-source-map --style=compressed",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": "sass src/css/style.prefix.css:public/css/style.css --no-source-map --style=compressed",
