@@ -1,5 +1,2 @@
 node_modules
 .test
-.vscode
-.github
-.gitlab-ci.yml
